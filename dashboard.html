@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Student Profile & Weekly Study Plan — KEP</title>
+  <meta name="description" content="KEP student dashboard for Kankor preparation progress, weak areas, dream field, and recent quiz attempts.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="KEP home">
+      <img src="assets/logo.svg" alt="KEP logo">
+    </a>
+    <nav class="nav-links">
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="study-plan-db.html">Study Plan</a>
+        <a href="library-db.html">Library</a>
+        <a href="student-db.html">Profile</a>
+      </nav>
+    <div class="nav-actions"><a class="btn btn-primary" href="mock-db.html">Take Mock</a><a class="btn btn-secondary" href="study-plan-db.html">Study Plan</a></div>
+    <button class="mobile-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main data-student-dashboard-v35>
+  <section class="page-hero dashboard-hero-v34">
+    <div class="container dashboard-hero-grid">
+      <div>
+        <div class="breadcrumb">Home / Student Dashboard</div>
+        <span class="eyebrow">KEP v3.5 profile + weekly plan</span>
+        <h1>Your personal Kankor plan, built around your goal.</h1>
+        <p>Save a simple student profile, choose your dream field, and generate a weekly study plan based on your progress, available time, and weak subjects.</p>
+        <p class="notice privacy">Privacy first: your profile, study plan, and progress stay locally in this browser for now. No Tazkira or sensitive identity is required for learning.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#weekly-plan">Create weekly plan</a><a class="btn btn-secondary" href="practice.html">Take a quiz</a></div>
+      </div>
+      <div class="dashboard-goal-card card">
+        <span class="eyebrow">Student profile</span>
+        <h3 data-student-greeting>Welcome back, learner.</h3>
+        <p class="small">Choose the path KEP should guide you toward.</p>
+        <label class="field"><span>Dream field</span>
+          <select data-dashboard-field>
+            <option value="medicine">Medicine</option>
+            <option value="engineering">Engineering</option>
+            <option value="computer_science">Computer Science</option>
+            <option value="law">Law</option>
+            <option value="education">Education</option>
+            <option value="general">General Kankor</option>
+          </select>
+        </label>
+        <button class="btn btn-primary full" type="button" data-save-dream-field>Save dream field</button>
+        <div class="goal-focus"><b>Focus subjects</b><span data-dashboard-field-focus>Mathematics • English • Logic</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="dashboard-metrics-v34">
+        <div class="metric"><strong data-dash-streak>0</strong><span>Study streak</span></div>
+        <div class="metric"><strong data-dash-last-score>—</strong><span>Last quiz score</span></div>
+        <div class="metric"><strong data-dash-average>0%</strong><span>Average score</span></div>
+        <div class="metric"><strong data-dash-weak>Start quiz</strong><span>Weak focus</span></div>
+        <div class="metric"><strong data-dash-field>Computer Science</strong><span>Dream field</span></div>
+        <div class="metric"><strong data-dash-total-attempts>0</strong><span>Total attempts</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="weekly-plan">
+    <div class="container dashboard-layout-v34 profile-plan-layout">
+      <div class="dash-panel profile-panel-v35">
+        <div class="section-head compact-head">
+          <div><span class="eyebrow">Student profile</span><h2>Tell KEP how you study.</h2></div>
+          <p>This is local-first and private. It helps KEP build a realistic plan for your week.</p>
+        </div>
+        <form class="profile-form-v35" data-student-profile-form>
+          <div class="form-grid compact-form-grid">
+            <label class="field"><span>Name or nickname</span><input name="name" data-profile-name placeholder="Example: Ahmad / Zaryab"></label>
+            <label class="field"><span>Province / location</span><input name="province" data-profile-province placeholder="Example: Kunar / Kabul / Abroad"></label>
+            <label class="field"><span>Study level</span><select name="level" data-profile-level><option value="grade12">Grade 12 / Kankor candidate</option><option value="foundation">Foundation learner</option><option value="graduate">School graduate</option><option value="selfstudy">Self-study learner</option></select></label>
+            <label class="field"><span>Available study time</span><select name="minutes" data-profile-minutes><option value="30">30 minutes/day</option><option value="45">45 minutes/day</option><option value="60">1 hour/day</option><option value="90">1.5 hours/day</option><option value="120">2 hours/day</option></select></label>
+            <label class="field"><span>Preferred language</span><select name="language" data-profile-language><option value="en">English</option><option value="ps">پښتو</option><option value="fa">دری</option></select></label>
+            <label class="field"><span>Target exam date</span><input name="targetDate" data-profile-target-date type="date"></label>
+          </div>
+          <div class="weekdays-v35" aria-label="Study days">
+            <label><input type="checkbox" name="days" value="Mon" checked> Mon</label>
+            <label><input type="checkbox" name="days" value="Tue" checked> Tue</label>
+            <label><input type="checkbox" name="days" value="Wed" checked> Wed</label>
+            <label><input type="checkbox" name="days" value="Thu" checked> Thu</label>
+            <label><input type="checkbox" name="days" value="Fri" checked> Fri</label>
+            <label><input type="checkbox" name="days" value="Sat" checked> Sat</label>
+            <label><input type="checkbox" name="days" value="Sun"> Sun</label>
+          </div>
+          <label class="privacy-toggle-v35"><input type="checkbox" name="privateMode" data-profile-private-mode> Private learner mode: hide my name on the dashboard</label>
+          <div class="profile-actions-v35">
+            <button class="btn btn-primary" type="submit">Save profile</button>
+            <button class="btn btn-secondary" type="button" data-generate-weekly-plan>Generate weekly plan</button>
+          </div>
+          <p class="small" data-profile-save-status></p>
+        </form>
+      </div>
+      <aside class="dash-panel weekly-summary-v35">
+        <span class="eyebrow">Personal focus</span>
+        <h3 data-profile-summary-title>No profile saved yet</h3>
+        <p data-profile-summary-text>Save your profile and KEP will use your dream field, study time, weak subject, and language preference to create a weekly plan.</p>
+        <div class="profile-mini-stats-v35">
+          <div><b data-profile-days-count>0</b><span>Study days</span></div>
+          <div><b data-profile-minutes-total>0</b><span>Minutes/week</span></div>
+        </div>
+        <button class="btn btn-secondary full" type="button" data-export-student-profile>Export profile backup</button>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head compact-head">
+        <div><span class="eyebrow">Weekly study plan</span><h2>Your next 7 learning steps.</h2></div>
+        <p>KEP combines your dream field with your weakest subject. This gives students a simple answer to: what should I study this week?</p>
+      </div>
+      <div class="weekly-toolbar-v35">
+        <button class="btn btn-primary" type="button" data-generate-weekly-plan>Refresh plan</button>
+        <button class="btn btn-secondary" type="button" data-print-weekly-plan>Print / save as PDF</button>
+        <button class="btn btn-secondary" type="button" data-clear-weekly-plan>Clear plan</button>
+      </div>
+      <div class="weekly-plan-grid-v35" data-weekly-plan-grid></div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container dashboard-layout-v34">
+      <div class="dash-panel dashboard-main-panel">
+        <div class="section-head compact-head">
+          <div><span class="eyebrow">Subject progress</span><h2>Your progress by subject</h2></div>
+          <p>Each quiz attempt updates these averages. Low scores become your next study target.</p>
+        </div>
+        <div data-dashboard-subject-progress></div>
+      </div>
+      <aside class="dash-panel dashboard-plan-panel">
+        <span class="eyebrow">Today’s plan</span>
+        <h3 data-dashboard-plan-title>Today’s focus</h3>
+        <p data-dashboard-plan-text>Take a short quiz first. Your dashboard will recommend the next weak area after that.</p>
+        <div class="todo"><span class="dot"></span><div><b>Start small</b><p class="small">Answer 3–5 questions before trying a long session.</p></div></div>
+        <div class="todo"><span class="dot"></span><div><b>Review mistakes</b><p class="small">Every wrong answer is a map to what you need next.</p></div></div>
+        <div class="todo"><span class="dot"></span><div><b>Repeat weak subject</b><p class="small">Practise the lowest average subject again.</p></div></div>
+        <a class="btn btn-primary full" href="practice.html">Start today’s quiz</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container dashboard-layout-v34 reverse">
+      <div class="dash-panel">
+        <div class="section-head compact-head"><div><span class="eyebrow">Recent attempts</span><h2>Latest quiz activity</h2></div></div>
+        <div data-dashboard-recent-attempts></div>
+      </div>
+      <div class="dash-panel">
+        <div class="section-head compact-head"><div><span class="eyebrow">Mistake review</span><h2>Wrong answers to revisit</h2></div></div>
+        <div data-dashboard-wrong-areas></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container card dashboard-next-card">
+      <div>
+        <span class="eyebrow">Next build step</span>
+        <h2>From personal plan to real accounts.</h2>
+        <p>For now, KEP stores profile, weekly plan, and quiz progress locally. The next stage can add secure student login so progress follows each learner across mobile and desktop.</p>
+        <p class="small"><b>Best subject so far:</b> <span data-dashboard-best-subject>No subject yet</span></p>
+      </div>
+      <div class="hero-actions"><a class="btn btn-primary" href="practice.html">Continue practice</a><button class="btn btn-secondary" type="button" data-clear-dashboard-progress>Clear local progress</button></div>
+    </div>
+  </section>
+</main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+
+<footer class="footer"><div class="container footer-bottom"><span>© 2026 KEP.</span><span>Prepare dot by dot.</span></div></footer><script src="nav-layout.js"></script>
+  <script src="student-shell.js"></script>
+  <script src="app.js"></script></body></html>

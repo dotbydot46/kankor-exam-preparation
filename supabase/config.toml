@@ -1,0 +1,4 @@
+project_id = "kep"
+
+[functions.kep-ai-review]
+verify_jwt = true

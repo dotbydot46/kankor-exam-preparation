@@ -1,0 +1,16 @@
+<svg width="206" height="58" viewBox="0 0 206 58" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">KEP logo</title>
+  <desc id="desc">Minimal KEP wordmark with a dot-by-dot learning path rising from an open book.</desc>
+  <rect x="1" y="1" width="56" height="56" rx="18" fill="#0B1F4D"/>
+  <path d="M15 40C22.5 36.5 34.5 36.5 42 40" stroke="white" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M16 35C22.8 32.2 31.3 32.2 38 35" stroke="#E8F1FF" stroke-width="2.3" stroke-linecap="round" opacity="0.95"/>
+  <path d="M20 30C25.5 28.1 31.4 28.1 37 30" stroke="#E8F1FF" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
+  <path d="M20 36C23.5 29.5 29 24 36 17" stroke="#22C55E" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="20" cy="36" r="3.8" fill="#22C55E"/>
+  <circle cx="28" cy="27" r="3.5" fill="#F7C948"/>
+  <circle cx="36" cy="17" r="4.4" fill="#F7C948"/>
+  <path d="M36 9.8L37.7 13.2L41.4 13.7L38.7 16.3L39.4 20L36 18.2L32.6 20L33.3 16.3L30.6 13.7L34.3 13.2L36 9.8Z" fill="#F7C948"/>
+  <path d="M25 17L18 17.5L24 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <text x="70" y="30" fill="#0B1F4D" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="25" font-weight="900" letter-spacing="1.5">KEP</text>
+  <text x="72" y="45" fill="#166534" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="9.5" font-weight="800" letter-spacing="1.4">KANKOR EXAM PREPARATION</text>
+</svg>

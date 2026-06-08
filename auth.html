@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Login — KEP</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script></head><body><header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="KEP home">
+      <img src="assets/logo.svg" alt="KEP logo">
+    </a>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="kankor-info.html">Kankor Info</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="subjects.html">Subjects</a>
+        <a href="library.html">Library</a>
+        <a href="auth.html" class="active">Login</a>
+      </nav>
+    <div class="nav-actions"><a class="btn btn-primary" href="student-home.html">Start Learning</a><a class="btn btn-secondary" href="auth.html">Login</a></div>
+    <button class="mobile-toggle" aria-label="Menu">☰</button>
+  </div>
+</header><main><section class="hero compact-hero"><div class="hero-bg"></div><div class="container hero-grid"><div><span class="eyebrow">KEP v4.0 • Accounts</span><h1>Student and admin login.</h1><p class="lead">Create a real KEP account so study progress, profile, and exam attempts can be saved in the database.</p></div><div class="hero-card"><h2>Current session</h2><p data-auth-session-status>Checking...</p><div class="small-actions"><a class="btn btn-secondary" href="database-setup.html">Database setup</a><button class="btn btn-ghost" type="button" data-auth-logout>Logout</button></div></div></div></section>
+<section class="section"><div class="container auth-grid"><form class="card auth-card" data-login-form><span class="eyebrow">Login</span><h2>Welcome back</h2><label class="field"><span>Email</span><input type="email" name="email" required></label><label class="field"><span>Password</span><input type="password" name="password" required></label><button class="btn btn-primary wide" type="submit">Login</button><p class="small" data-login-status></p></form><form class="card auth-card" data-signup-form><span class="eyebrow">Sign up</span><h2>Create student account</h2><label class="field"><span>Display name</span><input name="displayName" placeholder="Your name or nickname"></label><label class="field"><span>Email</span><input type="email" name="email" required></label><label class="field"><span>Password</span><input type="password" name="password" minlength="6" required></label><button class="btn btn-primary wide" type="submit">Create account</button><p class="small" data-signup-status></p></form></div></section></main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+<script src="supabase-config.js"></script><script src="app-v4.js"></script>  <script src="nav-layout.js"></script>
+</body></html>

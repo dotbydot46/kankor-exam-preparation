@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Review Assistant — KEP v5.4</title>
+  <meta name="description" content="Safe AI review assistant prototype for KEP content reviewers.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="KEP home">
+        <img src="assets/logo.svg" alt="KEP logo">
+      </a>
+      <nav class="nav-links">
+        <a href="admin-home.html">Admin Home</a>
+        <a href="admin-review-db.html">Review Content</a>
+        <a href="admin-db.html">Admin DB</a>
+        <a href="ai-review-assistant.html" class="active">AI Assistant</a>
+        <a href="ai-automation.html">AI Roadmap</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="#assistant">Try Assistant</a>
+        <a class="btn btn-secondary" href="admin-review-db.html">Review Queue</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero compact-hero admin-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">KEP v5.6 • AI Review + Saved Decisions</span>
+          <h1>Let AI support reviewers safely.</h1>
+          <p class="lead">This prototype checks question quality, drafts explanations, suggests difficulty, prepares translation placeholders, and creates duplicate-check hints.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#assistant">Open assistant</a>
+            <a class="btn btn-secondary" href="scripts/KEP_v5_4_AI_Review_Suggestions_Table.sql">AI SQL table</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Safety rule</h2>
+          <p>AI suggestions are not published automatically. A reviewer must approve, edit, or reject every suggestion.</p>
+          <div class="security-note">This version uses local prototype logic only. No real AI API key is used in the browser.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="assistant">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Prototype assistant</span>
+            <h2>Review a question before publishing</h2>
+            <p>Paste or type a question here. The prototype will generate reviewer notes.</p>
+          </div>
+        </div>
+
+        <div class="ai-review-layout">
+          <form class="card ai-review-form" data-ai-form onsubmit="return false;">
+            <label>Subject
+              <input data-ai-subject placeholder="Mathematics, Biology, English...">
+            </label>
+            <label>Question
+              <textarea data-ai-question rows="4" placeholder="Type the question here..."></textarea>
+            </label>
+            <label>Options
+              <textarea data-ai-options rows="5" placeholder="Write one option per line"></textarea>
+            </label>
+            <label>Correct answer
+              <input data-ai-correct placeholder="Exact option text, A/B/C/D, or index">
+            </label>
+            <label>Explanation
+              <textarea data-ai-explanation rows="4" placeholder="Add explanation or leave empty for draft suggestion"></textarea>
+            </label>
+            <label>Source / notes
+              <input data-ai-source placeholder="Book, teacher, volunteer, past paper note...">
+            </label>
+            <div class="ai-actions">
+              <button class="btn btn-primary" type="button" data-ai-action="run">Run AI Review</button>
+              <button class="btn btn-secondary" type="button" data-ai-action="demo">Fill Demo</button>
+              <button class="btn btn-ghost" type="button" data-ai-action="clear">Clear</button>
+            </div>
+          </form>
+
+          <aside class="card ai-review-result">
+            <span class="eyebrow">AI suggestion only</span>
+            <h3>Reviewer summary</h3>
+            <div data-ai-summary class="ai-summary-box"></div>
+            <h3>Suggestion JSON</h3>
+            <pre data-ai-output class="ai-output"></pre>
+            <button class="btn btn-secondary" type="button" data-ai-action="download">Download JSON</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="section v56-save-panel">
+      <div class="container">
+        <div class="card ai-save-panel">
+          <div>
+            <span class="eyebrow">KEP v5.6 saved AI workflow</span>
+            <h2>Save this suggestion for reviewer decision.</h2>
+            <p>After running the local or backend AI review, save the suggestion to Supabase. Then use Saved AI Suggestions to accept, edit, or reject it.</p>
+          </div>
+          <div class="ai-backend-actions">
+            <button class="btn btn-primary" type="button" data-ai-save-action="save">Save AI Suggestion</button>
+            <a class="btn btn-secondary" href="ai-suggestions-db.html">Open Saved AI Suggestions</a>
+          </div>
+          <div data-ai-save-status class="ai-backend-status">Run AI Review first, then save.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section v55-backend-panel">
+      <div class="container">
+        <div class="card ai-backend-panel">
+          <div>
+            <span class="eyebrow">KEP v5.5 real backend bridge</span>
+            <h2>Call the Supabase Edge Function safely.</h2>
+            <p>After deploying <code>kep-ai-review</code>, use this button to send the question to the backend. The AI key stays on the server, not inside the browser.</p>
+          </div>
+          <div class="ai-backend-actions">
+            <button class="btn btn-primary" type="button" data-ai-backend-action="call">Run Backend AI Review</button>
+            <a class="btn btn-secondary" href="ai-edge-setup.html">Setup Guide</a>
+          </div>
+          <div data-ai-backend-status class="ai-backend-status">Backend not called yet.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section">
+      <div class="container">
+        <div class="grid three">
+          <div class="role-card"><span>1</span><h3>Quality check</h3><p>Finds missing explanation, weak wording, duplicate options, and answer mismatch.</p></div>
+          <div class="role-card"><span>2</span><h3>Explanation draft</h3><p>Creates a simple draft explanation when the reviewer has not added one yet.</p></div>
+          <div class="role-card"><span>3</span><h3>Future AI-ready</h3><p>Prepared for a backend/Edge Function connection later, without exposing secret keys.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="nav-layout.js"></script>
+  <script src="app-v4.js"></script>
+  <script src="ai-review-assistant.js"></script>
+  <script src="ai-edge-client.js"></script>
+  <script src="ai-suggestion-save.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

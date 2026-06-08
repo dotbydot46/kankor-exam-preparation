@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Automation Plan — KEP</title>
+  <meta name="description" content="AI automation roadmap for KEP content review, translations, explanations, duplicate checks, and student study support.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="KEP home">
+        <img src="assets/logo.svg" alt="KEP logo">
+      </a>
+      <nav class="nav-links">
+        <a href="admin-home.html">Admin Home</a>
+        <a href="admin-review-db.html">Review Content</a>
+        <a href="admin-db.html">Admin DB</a>
+        <a href="ai-automation.html" class="active">AI Assistant</a>
+        <a href="student-home.html">Student View</a>
+      </nav>
+      <div class="nav-actions"><a class="btn btn-primary" href="admin-review-db.html">Review Queue</a><a class="btn btn-secondary" href="developer-setup.html">Setup Hub</a></div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero compact-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">KEP v5.1.1 • AI automation roadmap</span>
+          <h1>Use AI to help KEP, not to replace human review.</h1>
+          <p class="lead">AI can speed up cleaning, checking, translating, explaining, and recommending study plans. But published educational content must still be reviewed by humans.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#safe-ai">Safe AI uses</a>
+            <a class="btn btn-secondary" href="#phases">Build phases</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Golden rule</h2>
+          <p>AI can suggest. KEP reviewers approve. No AI-generated question should become “Published” without human checking.</p>
+          <div class="security-note">Never put private AI API keys directly inside frontend HTML/JS files.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="safe-ai">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Automation opportunities</span>
+            <h2>Where AI can help KEP most</h2>
+          </div>
+        </div>
+        <div class="grid three">
+          <article class="card ai-card">
+            <h3>Content cleaner</h3>
+            <p>Fix spelling, spacing, grammar, and option formatting before a reviewer checks the question.</p>
+          </article>
+          <article class="card ai-card">
+            <h3>Duplicate detector</h3>
+            <p>Warn reviewers when a new question looks similar to an existing published question.</p>
+          </article>
+          <article class="card ai-card">
+            <h3>Explanation helper</h3>
+            <p>Draft simple explanations for answers so students learn from mistakes.</p>
+          </article>
+          <article class="card ai-card">
+            <h3>Translation draft</h3>
+            <p>Create first-draft Pashto, Dari, and English versions. Human review remains required.</p>
+          </article>
+          <article class="card ai-card">
+            <h3>Difficulty estimate</h3>
+            <p>Suggest Easy, Medium, or Hard based on question wording and student performance.</p>
+          </article>
+          <article class="card ai-card">
+            <h3>Study coach</h3>
+            <p>Use weak subjects and recent attempts to suggest a focused weekly plan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section" id="phases">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Dot by dot</span>
+            <h2>AI build phases for KEP</h2>
+          </div>
+        </div>
+        <div class="setup-step-list">
+          <article class="setup-step-card">
+            <span class="step-number">1</span>
+            <div>
+              <h3>Reviewer AI checklist</h3>
+              <p>Add AI suggestion fields to the review workflow: quality notes, duplicate warning, explanation draft, difficulty suggestion.</p>
+            </div>
+          </article>
+          <article class="setup-step-card">
+            <span class="step-number">2</span>
+            <div>
+              <h3>Server-side AI function</h3>
+              <p>Use a backend/edge function so private AI keys never appear in the browser.</p>
+            </div>
+          </article>
+          <article class="setup-step-card">
+            <span class="step-number">3</span>
+            <div>
+              <h3>Student study coach</h3>
+              <p>Generate study guidance from saved attempts, weak subjects, and available resources.</p>
+            </div>
+          </article>
+          <article class="setup-step-card">
+            <span class="step-number">4</span>
+            <div>
+              <h3>Volunteer assistant</h3>
+              <p>Help volunteers submit cleaner questions and translations before reviewer approval.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="safety">
+      <div class="container">
+        <div class="card">
+          <span class="eyebrow">Safety and trust</span>
+          <h2>KEP AI rules</h2>
+          <ul class="check-list">
+            <li>AI suggestions must be labelled as suggestions.</li>
+            <li>Human review is required before publishing educational content.</li>
+            <li>Do not send sensitive student identity data to AI.</li>
+            <li>Never put secret AI keys in frontend files.</li>
+            <li>Do not claim official Kankor prediction or guaranteed admission.</li>
+            <li>Keep a review log so every published change can be traced.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="nav-layout.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

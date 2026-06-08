@@ -1,0 +1,44 @@
+{
+  "question": [
+    "subject",
+    "chapter",
+    "language",
+    "question",
+    "option_a",
+    "option_b",
+    "option_c",
+    "option_d",
+    "correct",
+    "explanation",
+    "difficulty",
+    "source",
+    "status"
+  ],
+  "past_paper": [
+    "title",
+    "year",
+    "subject",
+    "paper_type",
+    "language",
+    "permission",
+    "file_note",
+    "source",
+    "status"
+  ],
+  "book": [
+    "title",
+    "subject",
+    "grade",
+    "language",
+    "copyright",
+    "file_note",
+    "source",
+    "status"
+  ],
+  "correction": [
+    "issue_type",
+    "page",
+    "message",
+    "status"
+  ]
+}

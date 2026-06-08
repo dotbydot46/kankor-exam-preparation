@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Content Quality Dashboard — KEP v5.7</title>
+  <meta name="description" content="Admin dashboard for checking KEP question and resource quality before launch.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="KEP home">
+        <img src="assets/logo.svg" alt="KEP logo">
+      </a>
+      <nav class="nav-links">
+        <a href="admin-home.html">Admin Home</a>
+        <a href="admin-review-db.html">Review Content</a>
+        <a href="content-quality-db.html" class="active">Quality</a>
+        <a href="ai-suggestions-db.html">Saved AI</a>
+        <a href="ai-review-assistant.html">AI Assistant</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-primary" data-quality-action="load">Load Quality</button>
+        <button class="btn btn-secondary" data-quality-action="export">Export Report</button>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero compact-hero admin-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">KEP v5.7 • Content Quality Dashboard</span>
+          <h1>Know if KEP content is ready for real students.</h1>
+          <p class="lead">Check published questions, weak explanations, subject coverage, duplicate risk, and AI suggestion status from one place.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-quality-action="load">Load Quality Data</button>
+            <button class="btn btn-secondary" data-quality-action="export">Export Report</button>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Launch question</h2>
+          <p>Before students use KEP seriously, admins need to know: Is the content complete, reviewed, and safe enough?</p>
+          <div class="security-note">This dashboard helps review quality. It does not change or publish content.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div data-quality-status class="ai-backend-status">Click Load Quality Data to begin.</div>
+
+        <div data-quality-stats class="quality-stat-grid"></div>
+
+        <div class="quality-toolbar">
+          <label>Subject
+            <select data-quality-subject>
+              <option value="all">All subjects</option>
+            </select>
+          </label>
+          <label>Status
+            <select data-quality-status-filter>
+              <option value="all">All statuses</option>
+              <option value="published">Published</option>
+              <option value="needs_review">Needs review</option>
+              <option value="draft">Draft</option>
+              <option value="submitted">Submitted</option>
+              <option value="rejected">Rejected</option>
+            </select>
+          </label>
+          <label>Search
+            <input data-quality-search placeholder="Search question, subject, issue...">
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Subject coverage</span>
+            <h2>Questions by subject</h2>
+          </div>
+        </div>
+        <div data-quality-subjects></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Quality issues</span>
+            <h2>Questions that need attention</h2>
+            <p>Focus here first. These questions may be missing explanations, have weak options, or need review.</p>
+          </div>
+        </div>
+        <div data-quality-issues class="quality-issue-list"></div>
+      </div>
+    </section>
+
+    <section class="section muted-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Duplicate risk</span>
+            <h2>Exact duplicate question check</h2>
+            <p>This catches exact duplicates. Future AI can catch similar-meaning duplicates.</p>
+          </div>
+        </div>
+        <div data-quality-duplicates class="quality-duplicate-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="nav-layout.js"></script>
+  <script src="app-v4.js"></script>
+  <script src="content-quality-db.js"></script>
+</body>
+</html>

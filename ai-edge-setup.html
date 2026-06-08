@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Edge Function Setup — KEP v5.5</title>
+  <meta name="description" content="Setup guide for KEP v5.5 Supabase Edge Function AI review bridge.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="KEP home">
+        <img src="assets/logo.svg" alt="KEP logo">
+      </a>
+      <nav class="nav-links">
+        <a href="admin-home.html">Admin Home</a>
+        <a href="ai-review-assistant.html">AI Assistant</a>
+        <a href="ai-edge-setup.html" class="active">Edge Setup</a>
+        <a href="developer-setup.html">Setup Hub</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="ai-review-assistant.html">Test Assistant</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero compact-hero setup-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">KEP v5.5 • AI backend bridge</span>
+          <h1>Connect AI safely through Supabase Edge Functions.</h1>
+          <p class="lead">The browser should never hold secret AI keys. This setup moves AI calls to a backend function and requires admin/reviewer login.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="supabase/functions/kep-ai-review/index.ts">Open Function Code</a>
+            <a class="btn btn-secondary" href="KEP_v5_5_AI_Edge_Function_Setup_Guide.md">Open Guide</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>What this version gives you</h2>
+          <p>A ready Edge Function scaffold, frontend connector, setup guide, environment example, and safety checklist.</p>
+          <div class="security-note">No real secret is included in this ZIP.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Setup steps</span>
+            <h2>Deploy in this order</h2>
+          </div>
+        </div>
+
+        <div class="setup-step-list">
+          <article class="setup-step-card"><span class="step-number">1</span><div><h3>Install / open Supabase CLI</h3><p>Use Supabase CLI for local serving and deployment, or deploy the function from the dashboard if available.</p></div></article>
+          <article class="setup-step-card"><span class="step-number">2</span><div><h3>Add function secrets</h3><p>Set <code>OPENAI_API_KEY</code> and <code>OPENAI_MODEL</code> as Supabase function secrets. Do not put them in frontend files.</p></div></article>
+          <article class="setup-step-card"><span class="step-number">3</span><div><h3>Deploy function</h3><p>Deploy <code>kep-ai-review</code> from <code>supabase/functions/kep-ai-review/index.ts</code>.</p></div></article>
+          <article class="setup-step-card"><span class="step-number">4</span><div><h3>Login as admin/reviewer</h3><p>The function checks your Supabase login and profile role before returning suggestions.</p></div></article>
+          <article class="setup-step-card"><span class="step-number">5</span><div><h3>Open AI Assistant</h3><p>Fill a question and click <b>Run Backend AI Review</b>.</p></div></article>
+          <article class="setup-step-card"><span class="step-number">6</span><div><h3>Reviewer approves manually</h3><p>AI suggestions are never published automatically.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section">
+      <div class="container">
+        <div class="card">
+          <span class="eyebrow">Files added in v5.5</span>
+          <div class="sql-order-list">
+            <a href="supabase/functions/kep-ai-review/index.ts"><b>Edge Function</b><span>Backend AI review bridge</span></a>
+            <a href="ai-edge-client.js"><b>Frontend Connector</b><span>Calls the deployed Edge Function from AI Assistant</span></a>
+            <a href="supabase/functions/.env.example"><b>Environment Example</b><span>Shows required secrets without real values</span></a>
+            <a href="KEP_v5_5_AI_Edge_Function_Setup_Guide.md"><b>Setup Guide</b><span>Step-by-step deployment and testing</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="nav-layout.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

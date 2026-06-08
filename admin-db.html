@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Admin Database — KEP</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script></head><body><header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="KEP home">
+      <img src="assets/logo.svg" alt="KEP logo">
+    </a>
+    <nav class="nav-links">
+        <a href="admin-home.html">Admin Home</a>
+        <a href="admin-review-db.html">Review Content</a>
+        <a href="admin-db.html" class="active">Admin DB</a>
+        <a href="ai-automation.html">AI Assistant</a>
+        <a href="student-home.html">Student View</a>
+      </nav>
+    <div class="nav-actions"><a class="btn btn-primary" href="admin-review-db.html">Review Queue</a><a class="btn btn-secondary" href="developer-setup.html">Setup Hub</a></div>
+    <button class="mobile-toggle" aria-label="Menu">☰</button>
+  </div>
+</header><main><section class="hero compact-hero"><div class="hero-bg"></div><div class="container hero-grid"><div><span class="eyebrow">KEP v4.0 • Admin database</span><h1>Manage questions in the real database.</h1><p class="lead">First admin panel for adding and publishing questions into Supabase.</p></div><div class="hero-card"><h2>Admin status</h2><p data-admin-db-status>Checking permissions...</p><div class="small-actions"><button class="btn btn-primary" type="button" data-admin-refresh>Refresh</button><a class="btn btn-secondary" href="database-setup.html">Setup</a>
+            <a class="btn btn-ghost" href="migrate-to-db.html">Migration</a></div></div></div></section>
+<section class="section"><div class="container admin-db-grid"><form class="card" data-admin-question-form><span class="eyebrow">Question bank</span><h2>Add question</h2><label class="field"><span>Subject name</span><input name="subject_name" placeholder="Mathematics" required></label><label class="field"><span>Question</span><textarea name="question_text" required></textarea></label><div class="form-grid two"><label class="field"><span>Option A</span><input name="option_a" required></label><label class="field"><span>Option B</span><input name="option_b" required></label><label class="field"><span>Option C</span><input name="option_c"></label><label class="field"><span>Option D</span><input name="option_d"></label></div><label class="field"><span>Correct answer text</span><input name="correct_answer" required></label><label class="field"><span>Explanation</span><textarea name="explanation"></textarea></label><div class="form-grid two"><label class="field"><span>Language</span><select name="language"><option>English</option><option>Pashto</option><option>Dari</option></select></label><label class="field"><span>Status</span><select name="status"><option value="published">Published</option><option value="approved">Approved</option><option value="needs_review">Needs review</option></select></label></div><button class="btn btn-primary wide" type="submit">Save question</button><p class="small" data-admin-question-status></p></form><div class="admin-db-panel"><div class="card"><span class="eyebrow">Live questions</span><h2>Question bank</h2><button class="btn btn-secondary" type="button" data-admin-load-questions>Load questions</button></div><div data-admin-question-list class="admin-list"></div></div></div></section></main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+<script src="supabase-config.js"></script><script src="app-v4.js"></script>  <script src="nav-layout.js"></script>
+</body></html>
