@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Progress Analytics — KEP v5.8</title>
+  <meta name="description" content="Student progress analytics for KEP practice, mock exams, weak subjects, and study recommendations.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="KEP home">
+        <img src="assets/logo.svg" alt="KEP logo">
+      </a>
+      <nav class="nav-links">
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html" class="active">Progress</a>
+        <a href="study-plan-db.html">Study Plan</a>
+        <a href="library-db.html">Library</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-primary" data-progress-action="load">Load Progress</button>
+        <button class="btn btn-secondary" data-progress-action="export">Export</button>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero compact-hero student-home-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">KEP v5.8 • Student Progress</span>
+          <h1>See your progress, weak subjects, and next step.</h1>
+          <p class="lead">This page turns practice and mock results into simple analytics so students know how to improve dot by dot.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-progress-action="load">Load My Progress</button>
+            <a class="btn btn-secondary" href="study-plan-db.html">Create Study Plan</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Today’s guidance</h2>
+          <p data-progress-message>Complete a practice or mock exam to generate your progress guidance.</p>
+          <div class="security-note">Your personal progress should stay private to your account.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div data-progress-status class="ai-backend-status">Click Load My Progress to begin.</div>
+
+        <div class="progress-filter-row">
+          <label>Show
+            <select data-progress-filter>
+              <option value="all">All attempts</option>
+              <option value="practice">Practice only</option>
+              <option value="mock">Mock only</option>
+            </select>
+          </label>
+          <button class="btn btn-secondary" data-progress-action="export">Export Progress</button>
+        </div>
+
+        <div data-progress-stats class="student-progress-stats"></div>
+      </div>
+    </section>
+
+    <section class="section muted-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Score trend</span>
+            <h2>Your recent progress</h2>
+            <p>Each bar shows one recent attempt. The goal is not perfection — the goal is consistent improvement.</p>
+          </div>
+        </div>
+        <div data-progress-trend></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid two">
+          <div>
+            <div class="section-head">
+              <div>
+                <span class="eyebrow">Weak subjects</span>
+                <h2>Subject performance</h2>
+              </div>
+            </div>
+            <div data-progress-subjects class="subject-progress-list"></div>
+          </div>
+
+          <div>
+            <div class="section-head">
+              <div>
+                <span class="eyebrow">Next step</span>
+                <h2>Recommended actions</h2>
+              </div>
+            </div>
+            <div data-progress-recommendations class="student-recommendation-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">History</span>
+            <h2>Recent attempts</h2>
+          </div>
+        </div>
+        <div data-progress-recent class="recent-attempt-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="nav-layout.js"></script>
+  <script src="student-shell.js"></script>
+  <script src="app-v4.js"></script>
+  <script src="progress-analytics.js"></script>
+</body>
+</html>

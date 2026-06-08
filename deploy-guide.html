@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deploy KEP — v6.0</title>
+  <meta name="description" content="Deployment guide for KEP v6.0.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="KEP home">
+        <img src="assets/logo.svg" alt="KEP logo">
+      </a>
+      <nav class="nav-links">
+        <a href="developer-setup.html">Setup Hub</a>
+        <a href="deploy-guide.html" class="active">Deploy</a>
+        <a href="launch-mode.html">Launch Mode</a>
+        <a href="production-checklist.html">Checklist</a>
+        <a href="release-notes.html">Release</a>
+        <a href="student-home.html">Student</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="student-home.html">Start Learning</a>
+        <a class="btn btn-secondary" href="developer-setup.html">Setup</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero compact-hero setup-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">KEP v6.0 • Deployment Ready</span>
+          <h1>Deploy KEP safely as a real static website.</h1>
+          <p class="lead">This guide explains how to upload KEP, connect Supabase after deployment, test login, and avoid exposing secret keys.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="production-checklist.html">Production Checklist</a>
+            <a class="btn btn-secondary" href="release-notes.html">Release Notes</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Deployment rule</h2>
+          <p>KEP frontend can be deployed to GitHub Pages or Netlify. Supabase secret keys and AI keys must stay server-side only.</p>
+          <div class="security-note">Use only the public Supabase URL and publishable/anon key in the browser.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Deployment paths</span>
+            <h2>Choose one simple deployment method</h2>
+          </div>
+        </div>
+        <div class="grid two">
+          <article class="card deploy-card">
+            <span class="eyebrow">Option A</span>
+            <h2>GitHub Pages</h2>
+            <ol class="number-list">
+              <li>Extract the ZIP.</li>
+              <li>Upload files to your GitHub repository.</li>
+              <li>Go to repository Settings → Pages.</li>
+              <li>Deploy from the main branch.</li>
+              <li>Open the live GitHub Pages link.</li>
+              <li>Open <code>database-setup.html</code> on the live domain and save Supabase URL/key again.</li>
+            </ol>
+          </article>
+          <article class="card deploy-card">
+            <span class="eyebrow">Option B</span>
+            <h2>Netlify</h2>
+            <ol class="number-list">
+              <li>Extract the ZIP.</li>
+              <li>Drag the folder into Netlify Deploys or connect GitHub.</li>
+              <li>Keep publish folder as root.</li>
+              <li>Open the Netlify URL.</li>
+              <li>Open <code>database-setup.html</code> on Netlify and save Supabase URL/key again.</li>
+              <li>Test student and admin journeys.</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section">
+      <div class="container">
+        <div class="grid two">
+          <div class="card">
+            <span class="eyebrow">Supabase after deployment</span>
+            <h2>Production settings to check</h2>
+            <ul class="check-list">
+              <li>Add your live domain to Supabase Auth URL configuration.</li>
+              <li>Confirm RLS policies are enabled.</li>
+              <li>Keep service-role key private.</li>
+              <li>Use the public project URL, not the dashboard URL.</li>
+              <li>Use public publishable/anon key only in frontend.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="eyebrow">Final testing</span>
+            <h2>Test these live pages</h2>
+            <div class="sql-order-list">
+              <a href="student-home.html"><b>Student Home</b><span>Student landing and quick actions</span></a>
+              <a href="practice-db.html"><b>Practice</b><span>Loads published questions</span></a>
+              <a href="mock-db.html"><b>Mock Exam</b><span>Timed exam flow</span></a>
+              <a href="progress-analytics.html"><b>Progress</b><span>Score trends and weak subjects</span></a>
+              <a href="admin-home.html"><b>Admin Home</b><span>Reviewer/admin dashboard</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="nav-layout.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Production Checklist — KEP v6.0</title>
+  <meta name="description" content="Production safety checklist for KEP.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="KEP home">
+        <img src="assets/logo.svg" alt="KEP logo">
+      </a>
+      <nav class="nav-links">
+        <a href="developer-setup.html">Setup Hub</a>
+        <a href="deploy-guide.html">Deploy</a>
+        <a href="launch-mode.html">Launch Mode</a>
+        <a href="production-checklist.html" class="active">Checklist</a>
+        <a href="release-notes.html">Release</a>
+        <a href="student-home.html">Student</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="student-home.html">Start Learning</a>
+        <a class="btn btn-secondary" href="developer-setup.html">Setup</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero compact-hero setup-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Production checklist</span>
+          <h1>Check KEP before inviting real students.</h1>
+          <p class="lead">Use this checklist after deployment. It covers public pages, student flow, admin flow, content quality, Supabase, and AI safety.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="deploy-guide.html">Deployment Guide</a>
+            <a class="btn btn-secondary" href="content-quality-db.html">Quality Dashboard</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Launch mode</h2>
+          <p>Start with 2–3 trusted testers before sharing KEP widely.</p>
+          <div class="security-note">Small testing first protects the project and students.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container launch-checklist">
+        <div class="card checklist-card">
+          <span class="eyebrow">1. Public trust</span>
+          <h2>Public website</h2>
+          <ul class="check-list">
+            <li>Home page is clear and mobile friendly.</li>
+            <li>About page explains KEP mission.</li>
+            <li>Privacy and Terms pages are visible.</li>
+            <li>Contact details are updated from placeholders.</li>
+            <li>KEP does not claim official exam authority.</li>
+          </ul>
+        </div>
+        <div class="card checklist-card">
+          <span class="eyebrow">2. Student journey</span>
+          <h2>Student app</h2>
+          <ul class="check-list">
+            <li>Signup/login works on live domain.</li>
+            <li>Student Home opens correctly.</li>
+            <li>Practice loads published questions.</li>
+            <li>Mock Exam can start and finish.</li>
+            <li>Progress page shows attempts after tests.</li>
+          </ul>
+        </div>
+        <div class="card checklist-card">
+          <span class="eyebrow">3. Admin journey</span>
+          <h2>Admin/reviewer</h2>
+          <ul class="check-list">
+            <li>Admin/reviewer profile role is set.</li>
+            <li>Admin Review DB can load content.</li>
+            <li>Content Quality Dashboard loads.</li>
+            <li>AI suggestions are saved only for review.</li>
+            <li>Reviewer can accept/edit/reject suggestions.</li>
+          </ul>
+        </div>
+        <div class="card checklist-card">
+          <span class="eyebrow">4. Security</span>
+          <h2>Database and AI safety</h2>
+          <ul class="check-list">
+            <li>RLS is enabled on Supabase tables.</li>
+            <li>No service-role key is in frontend files.</li>
+            <li>No AI secret key is in frontend files.</li>
+            <li>Supabase Auth redirect URLs are configured.</li>
+            <li>Only admin/reviewer can use admin functions.</li>
+          </ul>
+        </div>
+        <div class="card checklist-card">
+          <span class="eyebrow">5. Content</span>
+          <h2>Learning quality</h2>
+          <ul class="check-list">
+            <li>Demo questions are replaced or labelled.</li>
+            <li>Subjects have enough published questions.</li>
+            <li>Weak explanations are improved.</li>
+            <li>Duplicate questions are checked.</li>
+            <li>Library resources have trusted source notes.</li>
+          </ul>
+        </div>
+        <div class="card checklist-card">
+          <span class="eyebrow">6. First testers</span>
+          <h2>Controlled testing</h2>
+          <ul class="check-list">
+            <li>Invite 2–3 trusted testers first.</li>
+            <li>Ask them to test on mobile.</li>
+            <li>Collect issues in one document.</li>
+            <li>Fix serious issues before wider sharing.</li>
+            <li>Review feedback weekly.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="nav-layout.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

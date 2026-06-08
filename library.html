@@ -1,0 +1,95 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Library — KEP</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css"></head><body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="KEP home">
+      <img src="assets/logo.svg" alt="KEP logo">
+    </a>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="kankor-info.html">Kankor Info</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="subjects.html">Subjects</a>
+        <a href="library.html" class="active">Library</a>
+        <a href="auth.html">Login</a>
+      </nav>
+    <div class="nav-actions"><a class="btn btn-primary" href="student-home.html">Start Learning</a><a class="btn btn-secondary" href="auth.html">Login</a></div>
+    <button class="mobile-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+<main><section class="page-hero"><div class="container"><div class="breadcrumb">Home / Library</div><span class="eyebrow">Books & past papers</span><h1>Books Library</h1><p>Organized books, notes, formula sheets, and past papers. The first version uses sample cards; later this connects to the real database and file storage.</p></div></section>
+
+<section class="section live-library-section" id="approved-resources">
+  <div class="container">
+    <div class="card library-live-card">
+      <div>
+        <span class="eyebrow">KEP v3.8</span>
+        <h2>Approved resources from Google Sheets.</h2>
+        <p>Load books, notes, PDFs, and past papers that have been reviewed and marked <b>Published</b> in the KEP Content Collection System.</p>
+        <div class="security-note">Only published resources appear here. Unchecked submissions stay inside the Review Dashboard until approved.</div>
+      </div>
+      <div class="connector-controls compact">
+        <label class="field"><span>Apps Script Web App URL</span><input type="url" data-library-live-api-url placeholder="https://script.google.com/macros/s/.../exec"></label>
+        <div class="small-actions">
+          <button class="btn btn-primary" type="button" data-load-published-resources>Load approved resources</button>
+          <button class="btn btn-secondary" type="button" data-save-library-api>Save URL</button>
+          <button class="btn btn-ghost" type="button" data-clear-library-cache>Use sample library</button>
+        </div>
+        <p class="small" data-library-resource-status>Paste the same v3.8 Apps Script URL you use for Practice and Review.</p>
+      </div>
+    </div>
+
+    <div class="library-live-toolbar">
+      <div class="filters">
+        <button class="filter active" type="button" data-library-filter-type="All">All</button>
+        <button class="filter" type="button" data-library-filter-type="Book / Notes">Books / Notes</button>
+        <button class="filter" type="button" data-library-filter-type="Past Paper">Past Papers</button>
+      </div>
+      <div class="library-filter-selects">
+        <select data-library-filter-subject><option value="All">All subjects</option></select>
+        <select data-library-filter-language><option value="All">All languages</option></select>
+      </div>
+    </div>
+
+    <div class="library-resource-grid" data-library-resource-grid>
+      <div class="empty-state-soft"><b>No live resources loaded yet.</b><span>Click “Load approved resources” after you mark books or past papers as Published in the Review Dashboard.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">Sample library</span><h2>Starter study resources</h2></div><div class="filters"><button class="filter active">All</button><button class="filter">Math</button><button class="filter">Science</button><button class="filter">Languages</button></div></div><div class="list-card"><div><strong>Mathematics Formula Sheet</strong><p>Grade 12 • PDF • Dari/Pashto support planned</p></div><div class="list-actions"><button class="btn-mini">Read</button><button class="btn-mini">Save</button></div></div><div class="list-card"><div><strong>Biology Quick Revision Notes</strong><p>Cells, human body, plants • PDF</p></div><div class="list-actions"><button class="btn-mini">Read</button><button class="btn-mini">Save</button></div></div><div class="list-card"><div><strong>English Vocabulary for Kankor</strong><p>Common words and meanings • Guide</p></div><div class="list-actions"><button class="btn-mini">Read</button><button class="btn-mini">Save</button></div></div><div class="list-card"><div><strong>Physics Important Formulas</strong><p>Motion, electricity, light • Revision</p></div><div class="list-actions"><button class="btn-mini">Read</button><button class="btn-mini">Save</button></div></div></div></section>
+<section class="section section-alt" id="papers"><div class="container"><div class="section-head"><div><span class="eyebrow">Past papers</span><h2>Review exam patterns.</h2></div><p>Past papers help students understand question style, timing, and repeated weak areas.</p></div><div class="list-card"><div><strong>Kankor Past Paper — Full Practice Set</strong><p>Sample • Mixed subjects • Timed practice planned</p></div><div class="list-actions"><button class="btn-mini">View PDF</button><button class="btn-mini">Practise</button></div></div><div class="list-card"><div><strong>Biology Past Questions</strong><p>Subject-wise practice • explanations planned</p></div><div class="list-actions"><button class="btn-mini">View</button><button class="btn-mini">Save</button></div></div><div class="list-card"><div><strong>Mathematics Past Questions</strong><p>Subject-wise practice • difficulty labels planned</p></div><div class="list-actions"><button class="btn-mini">View</button><button class="btn-mini">Save</button></div></div></div></section>
+<section class="section"><div class="container"><div class="feature-strip packs-library-strip"><div><span class="eyebrow" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:#fff">KEP v3.7</span><h2>From library to study packs.</h2><p>Books and notes become more useful when they are connected to a weekly plan, short MCQs, review tasks, and printable checklists.</p><a class="btn btn-gold" href="study-packs.html">Open Study Packs</a></div><div class="feature-points"><div>✅ Foundation packs</div><div>✅ Girls private study packs</div><div>✅ Kankor bridge packs</div><div>✅ Print / save as PDF</div></div></div></div></section>
+</main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+<footer class="footer"><div class="container footer-bottom"><span>© 2026 KEP.</span><span>Prepare dot by dot.</span></div></footer><script src="nav-layout.js"></script>
+  <script src="app.js"></script></body></html>

@@ -1,0 +1,9 @@
+{
+  "question_submission_form": "https://docs.google.com/forms/d/e/1FAIpQLSePNw5pbwPRRdeFQXJMtPpxzPeT-TfUIQmYQ24L6vJU54_VYQ/viewform",
+  "past_paper_submission_form": "https://docs.google.com/forms/d/e/1FAIpQLSd-ueATZK44b2sNzmfZ6wsKtHgG4eTeEgviDtCogzpTgUrIiw/viewform",
+  "book_notes_submission_form": "https://docs.google.com/forms/d/e/1FAIpQLScxiAInP0eVwoOwV7UK3LExJr3QTh8ADgU6aEdnoCF2Z9YoKA/viewform",
+  "correction_report_form": "https://docs.google.com/forms/d/e/1FAIpQLSeULMyJ4VCKLZL6ejUiaspdyJUGTHiHIPWVVx1SuF6PYI3pvA/viewform",
+  "volunteer_application_form": "https://docs.google.com/forms/d/e/1FAIpQLSdxJaiXiNUO6flbSBE8iR271U73r6I2Y9f1bNwPoOJ62wUoow/viewform",
+  "master_spreadsheet": "ADD_MASTER_GOOGLE_SHEET_URL_WHEN_READY",
+  "notes": "KEP v2.8: live Google Form links connected to website buttons. Replace/add the master spreadsheet URL when you want to display it."
+}

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Update Sitemap URL after choosing the final KEP domain.
+# Sitemap: https://your-kep-domain.example/sitemap.xml

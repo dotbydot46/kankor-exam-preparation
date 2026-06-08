@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Release Notes — KEP v6.0</title>
+  <meta name="description" content="Release notes for KEP v6.0.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="KEP home">
+        <img src="assets/logo.svg" alt="KEP logo">
+      </a>
+      <nav class="nav-links">
+        <a href="developer-setup.html">Setup Hub</a>
+        <a href="deploy-guide.html">Deploy</a>
+        <a href="launch-mode.html">Launch Mode</a>
+        <a href="production-checklist.html">Checklist</a>
+        <a href="release-notes.html" class="active">Release</a>
+        <a href="student-home.html">Student</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="student-home.html">Start Learning</a>
+        <a class="btn btn-secondary" href="developer-setup.html">Setup</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero compact-hero setup-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">KEP v6.0</span>
+          <h1>Deployment Ready Package</h1>
+          <p class="lead">This release prepares KEP for real-world upload, testing, and controlled launch.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="deploy-guide.html">Deploy Guide</a>
+            <a class="btn btn-secondary" href="production-checklist.html">Checklist</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Release status</h2>
+          <p>v6.0 is a release-candidate package. It is ready for deployment testing, not yet a final public launch to many students.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid three">
+          <article class="role-card"><span>S</span><h3>Student System</h3><p>Student Home, Practice, Mock Exam, Progress Analytics, Study Plan, Library, and Profile.</p></article>
+          <article class="role-card"><span>A</span><h3>Admin System</h3><p>Admin Home, Review DB, Admin DB, Content Quality, Saved AI Suggestions, and AI Review Assistant.</p></article>
+          <article class="role-card"><span>D</span><h3>Deployment System</h3><p>Deploy guide, production checklist, launch mode plan, static config files, release notes, and safety docs.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section">
+      <div class="container">
+        <div class="card">
+          <span class="eyebrow">Included in v6.0</span>
+          <div class="release-list">
+            <div><b>Public trust pages</b><span>About, Privacy, Terms, Contact, Launch Checklist.</span></div>
+            <div><b>Student learning flow</b><span>Practice, mock, progress, study plan, library.</span></div>
+            <div><b>Admin quality flow</b><span>Review, publish, quality dashboard, saved AI suggestions.</span></div>
+            <div><b>AI-safe architecture</b><span>AI review assistant, Edge Function scaffold, no frontend secret keys.</span></div>
+            <div><b>Deployment assets</b><span>Netlify config, headers, robots, sitemap, gitignore, release docs.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="nav-layout.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

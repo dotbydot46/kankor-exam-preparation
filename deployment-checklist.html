@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deployment Checklist — KEP v5.0</title>
+  <meta name="description" content="KEP deployment readiness checklist for Supabase, student journey, admin journey, mobile, and launch.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="KEP home">
+        <img src="assets/logo.svg" alt="KEP logo">
+      </a>
+      <nav class="nav-links">
+        <a href="developer-setup.html">Setup Hub</a>
+        <a href="database-setup.html">Database</a>
+        <a href="supabase-setup.html">Supabase</a>
+        <a href="migrate-to-db.html">Migration</a>
+        <a href="system-review.html">System Review</a>
+        <a href="deployment-checklist.html" class="active">Deploy Check</a>
+      </nav>
+      <div class="nav-actions"><a class="btn btn-primary" href="student-home.html">Student View</a><a class="btn btn-secondary" href="admin-home.html">Admin Home</a></div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero compact-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">KEP v5.0 • Deployment readiness</span>
+          <h1>Check before going live.</h1>
+          <p class="lead">Use this checklist before deploying KEP publicly or showing it as a serious portfolio/project demo.</p>
+        </div>
+        <div class="hero-card">
+          <h2>Launch rule</h2>
+          <p>Do not launch with real students until login, RLS policies, admin roles, published content, and mobile pages are tested.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container deploy-check-grid">
+        <div class="card checklist-card">
+          <span class="eyebrow">1</span>
+          <h2>Database setup</h2>
+          <label><input type="checkbox"> Supabase project created</label>
+          <label><input type="checkbox"> v4.0 SQL schema run</label>
+          <label><input type="checkbox"> Optional v4.4 study plan SQL run</label>
+          <label><input type="checkbox"> Profile insert policy run if needed</label>
+          <label><input type="checkbox"> Supabase anon key saved in Database Setup</label>
+        </div>
+
+        <div class="card checklist-card">
+          <span class="eyebrow">2</span>
+          <h2>Admin setup</h2>
+          <label><input type="checkbox"> Admin account created</label>
+          <label><input type="checkbox"> Admin profile role changed to admin</label>
+          <label><input type="checkbox"> Review DB loads content</label>
+          <label><input type="checkbox"> Question status can be changed</label>
+          <label><input type="checkbox"> Resource status can be changed</label>
+        </div>
+
+        <div class="card checklist-card">
+          <span class="eyebrow">3</span>
+          <h2>Student testing</h2>
+          <label><input type="checkbox"> Student signup works</label>
+          <label><input type="checkbox"> Student profile saves</label>
+          <label><input type="checkbox"> Practice DB loads questions</label>
+          <label><input type="checkbox"> Mock DB saves result</label>
+          <label><input type="checkbox"> Study Plan generates correctly</label>
+          <label><input type="checkbox"> Student Home shows today’s task</label>
+        </div>
+
+        <div class="card checklist-card">
+          <span class="eyebrow">4</span>
+          <h2>Content testing</h2>
+          <label><input type="checkbox"> At least 20 sample questions added</label>
+          <label><input type="checkbox"> At least 3 resources added</label>
+          <label><input type="checkbox"> Content marked published</label>
+          <label><input type="checkbox"> Library DB shows resources</label>
+          <label><input type="checkbox"> Mock DB uses published questions</label>
+        </div>
+
+        <div class="card checklist-card">
+          <span class="eyebrow">5</span>
+          <h2>UI and mobile</h2>
+          <label><input type="checkbox"> Header stays consistent</label>
+          <label><input type="checkbox"> Logo stays consistent</label>
+          <label><input type="checkbox"> Mobile menu opens</label>
+          <label><input type="checkbox"> Student pages readable on phone</label>
+          <label><input type="checkbox"> Admin pages usable on laptop</label>
+        </div>
+
+        <div class="card checklist-card">
+          <span class="eyebrow">6</span>
+          <h2>Honesty and safety</h2>
+          <label><input type="checkbox"> Mock results say “study estimate” only</label>
+          <label><input type="checkbox"> Kankor official rules marked verified/unverified</label>
+          <label><input type="checkbox"> No service-role key in frontend</label>
+          <label><input type="checkbox"> No private student data shown publicly</label>
+          <label><input type="checkbox"> Published content reviewed by admin/reviewer</label>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section">
+      <div class="container">
+        <div class="card">
+          <span class="eyebrow">Next decision</span>
+          <h2>After checklist testing</h2>
+          <p>If the checklist passes, the next milestone should be <b>v5.1 Real Supabase Setup Walkthrough</b> or <b>v5.1 Mobile UI Polish</b>, depending on what you want to test first.</p>
+          <div class="small-actions">
+            <a class="btn btn-primary" href="system-review.html">Back to System Review</a>
+            <a class="btn btn-secondary" href="student-home.html">Open Student Home</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="nav-layout.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

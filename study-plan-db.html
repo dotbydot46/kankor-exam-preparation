@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Database Study Plan — KEP</title>
+  <meta name="description" content="Generate a weekly KEP study plan from database attempts, weak subjects, and resources.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="KEP home">
+        <img src="assets/logo.svg" alt="KEP logo">
+      </a>
+      <nav class="nav-links">
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="study-plan-db.html" class="active">Study Plan</a>
+        <a href="library-db.html">Library</a>
+        <a href="student-db.html">Profile</a>
+      </nav>
+      <div class="nav-actions"><a class="btn btn-primary" href="mock-db.html">Take Mock</a><a class="btn btn-secondary" href="study-plan-db.html">Study Plan</a></div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero compact-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">KEP v4.4 • Smart Study Plan</span>
+          <h1>Turn your saved results into a weekly study plan.</h1>
+          <p class="lead">This page reads database attempts, finds weak subjects, recommends resources, and builds a simple 7-day plan for the student.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button" data-v44-load>Load my progress</button>
+            <button class="btn btn-secondary" type="button" data-v44-generate>Generate plan</button>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Study plan status</h2>
+          <p data-v44-status>Login and load your database progress.</p>
+          <div class="security-note">Private learner mode keeps the plan personal and simple, without public sharing.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="db-stat-grid" data-v44-stats>
+          <div><b>0</b><span>Attempts</span></div>
+          <div><b>0%</b><span>Average</span></div>
+          <div><b>0%</b><span>Latest</span></div>
+          <div><b>—</b><span>Weak subject</span></div>
+        </div>
+
+        <div class="study-plan-layout">
+          <aside class="card study-plan-settings">
+            <span class="eyebrow">Plan settings</span>
+            <h2>Build your plan</h2>
+            <label class="field">
+              <span>Daily study time</span>
+              <select data-v44-minutes>
+                <option value="20">20 minutes</option>
+                <option value="30" selected>30 minutes</option>
+                <option value="45">45 minutes</option>
+                <option value="60">60 minutes</option>
+                <option value="90">90 minutes</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Main goal</span>
+              <select data-v44-goal>
+                <option>General Kankor</option>
+                <option>Medicine</option>
+                <option>Engineering</option>
+                <option>Computer Science</option>
+                <option>Law</option>
+                <option>Education</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Plan intensity</span>
+              <select data-v44-intensity>
+                <option value="gentle">Gentle recovery</option>
+                <option value="balanced" selected>Balanced</option>
+                <option value="strong">Strong push</option>
+              </select>
+            </label>
+            <label class="check-row">
+              <input type="checkbox" data-v44-private>
+              <span>Private learner mode</span>
+            </label>
+            <div class="small-actions">
+              <button class="btn btn-primary" type="button" data-v44-generate>Generate plan</button>
+              <button class="btn btn-secondary" type="button" data-v44-save>Save plan</button>
+              <button class="btn btn-ghost" type="button" data-v44-print>Print / PDF</button>
+            </div>
+            <p class="small">The plan is based on your database attempts. If you have no attempts yet, KEP creates a starter plan.</p>
+          </aside>
+
+          <section class="study-plan-main">
+            <div class="card">
+              <span class="eyebrow">Diagnosis</span>
+              <h2>Your learning snapshot</h2>
+              <div class="learning-snapshot" data-v44-snapshot>
+                <p class="small">No progress loaded yet.</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <span class="eyebrow">7-day plan</span>
+              <h2>Your weekly study plan</h2>
+              <div class="weekly-plan-grid" data-v44-plan>
+                <div class="empty-state-soft"><b>No plan generated yet.</b><span>Load progress, then generate your plan.</span></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <span class="eyebrow">Resources</span>
+              <h2>Recommended library resources</h2>
+              <div class="library-resource-grid compact" data-v44-resources>
+                <div class="empty-state-soft"><b>No recommendations yet.</b><span>Published resources from your weak subjects will appear here.</span></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <span class="eyebrow">Next action</span>
+              <h2>What to do after this plan</h2>
+              <div class="next-actions-grid">
+                <a class="action-card" href="practice-db.html"><b>Practice DB</b><span>Practise weak subjects</span></a>
+                <a class="action-card" href="mock-db.html"><b>Mock DB</b><span>Take a timed exam</span></a>
+                <a class="action-card" href="library-db.html"><b>Library DB</b><span>Read recommended resources</span></a>
+                <a class="action-card" href="student-db.html"><b>Student DB</b><span>Check saved progress</span></a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="supabase-config.js"></script>
+  <script src="app-v4.js"></script>
+  <script src="nav-layout.js"></script>
+  <script src="student-shell.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>System Review — KEP v5.0</title>
+  <meta name="description" content="Full KEP v5.0 system review, student journey, admin journey, database readiness, and next roadmap.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="KEP home">
+        <img src="assets/logo.svg" alt="KEP logo">
+      </a>
+      <nav class="nav-links">
+        <a href="developer-setup.html">Setup Hub</a>
+        <a href="database-setup.html">Database</a>
+        <a href="supabase-setup.html">Supabase</a>
+        <a href="migrate-to-db.html">Migration</a>
+        <a href="system-review.html" class="active">System Review</a>
+        <a href="deployment-checklist.html">Deploy Check</a>
+      </nav>
+      <div class="nav-actions"><a class="btn btn-primary" href="student-home.html">Student View</a><a class="btn btn-secondary" href="admin-home.html">Admin Home</a></div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero compact-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">KEP v5.0 • Full system review</span>
+          <h1>KEP is now a connected learning system.</h1>
+          <p class="lead">This page checks the complete journey: student learning, admin review, database flow, content migration, study plans, and deployment readiness.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#student-journey">Student journey</a>
+            <a class="btn btn-secondary" href="#admin-journey">Admin journey</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>v5.0 status</h2>
+          <p>Prototype is now strong enough to test with real Supabase setup and sample content.</p>
+          <div class="security-note">Next focus: reduce complexity, test real accounts, and polish mobile user flow.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="system-health-grid">
+          <div class="health-card good"><b>Student flow</b><span>Connected</span></div>
+          <div class="health-card good"><b>Admin flow</b><span>Connected</span></div>
+          <div class="health-card good"><b>Database foundation</b><span>Ready</span></div>
+          <div class="health-card warn"><b>Real deployment</b><span>Needs Supabase setup</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="student-journey">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Student experience</span>
+            <h2>Student journey map</h2>
+            <p>The student now has a clear path from login to learning action.</p>
+          </div>
+        </div>
+
+        <div class="journey-flow">
+          <a href="auth.html"><b>1. Login</b><span>Create or open account</span></a>
+          <a href="student-home.html"><b>2. Student Home</b><span>See today’s task</span></a>
+          <a href="practice-db.html"><b>3. Practice</b><span>Answer published questions</span></a>
+          <a href="mock-db.html"><b>4. Mock Exam</b><span>Take timed exam</span></a>
+          <a href="study-plan-db.html"><b>5. Study Plan</b><span>Fix weak subjects</span></a>
+          <a href="library-db.html"><b>6. Library</b><span>Use approved resources</span></a>
+        </div>
+
+        <div class="grid three">
+          <div class="card">
+            <h3>What is working</h3>
+            <p>Student accounts, saved attempts, weak subject detection, study plan generation, wrong-answer review, and recommended resources.</p>
+          </div>
+          <div class="card">
+            <h3>What to test</h3>
+            <p>Signup, login, profile save, practice result save, mock result save, study plan save, resource save, and mobile navigation.</p>
+          </div>
+          <div class="card">
+            <h3>What to improve later</h3>
+            <p>Daily streak, notifications, password reset polish, account settings, and progress charts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section" id="admin-journey">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Admin experience</span>
+            <h2>Admin and content journey</h2>
+            <p>KEP now has both the old Google Sheets bridge and the new Supabase review system.</p>
+          </div>
+        </div>
+
+        <div class="journey-flow admin-flow">
+          <a href="submit-content.html"><b>1. Submit</b><span>Forms / content pages</span></a>
+          <a href="review-dashboard.html"><b>2. Sheets Review</b><span>Old review path</span></a>
+          <a href="migrate-to-db.html"><b>3. Migration</b><span>Move to Supabase</span></a>
+          <a href="admin-review-db.html"><b>4. Review DB</b><span>Approve or reject</span></a>
+          <a href="admin-db.html"><b>5. Admin DB</b><span>Add questions</span></a>
+          <a href="library-db.html"><b>6. Publish</b><span>Students see content</span></a>
+        </div>
+
+        <div class="card">
+          <h3>Admin safety rule</h3>
+          <p>Only content marked <b>published</b> should appear to students. Admin/reviewer users should check academic correctness, source reliability, language quality, and student safety before publishing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="page-map">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Page map</span>
+            <h2>Main pages and purpose</h2>
+          </div>
+        </div>
+        <div class="page-map-grid">
+          <a href="student-home.html"><b>Student Home</b><span>Main student starting page</span></a>
+          <a href="student-db.html"><b>Student DB</b><span>Profile and saved attempts</span></a>
+          <a href="study-plan-db.html"><b>Study Plan DB</b><span>Weekly plan and resources</span></a>
+          <a href="practice-db.html"><b>Practice DB</b><span>Database MCQ practice</span></a>
+          <a href="mock-db.html"><b>Mock DB</b><span>Database mock exam</span></a>
+          <a href="library-db.html"><b>Library DB</b><span>Database resources</span></a>
+          <a href="admin-review-db.html"><b>Review DB</b><span>Database review dashboard</span></a>
+          <a href="migrate-to-db.html"><b>Migration</b><span>Sheets to Supabase bridge</span></a>
+          <a href="database-setup.html"><b>Database Setup</b><span>Supabase connection</span></a>
+          <a href="kankor-rules.html"><b>Exam Rules</b><span>Kankor templates and trust rules</span></a>
+          <a href="girls-pathway.html"><b>Girls Pathway</b><span>Private self-study pathway</span></a>
+          <a href="deployment-checklist.html"><b>Deploy Check</b><span>Before going live</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section">
+      <div class="container">
+        <div class="card result-hero-card">
+          <span class="eyebrow">Recommended next milestone</span>
+          <h2>Before adding more features, test the real database setup.</h2>
+          <p>Set up Supabase, run the SQL files, create one admin account, add sample content, publish it, then test the complete student journey.</p>
+          <div class="hero-actions">
+            <a class="btn btn-light" href="deployment-checklist.html">Open Deployment Checklist</a>
+            <a class="btn btn-outline-light" href="KEP_v5_0_Full_System_Review_Report.md">Read v5.0 Report</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="nav-layout.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

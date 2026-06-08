@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Practice MCQs — KEP</title>
+  <meta name="description" content="Practice Kankor MCQs by subject and language with instant results and explanations.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="KEP home">
+      <img src="assets/logo.svg" alt="KEP logo">
+    </a>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="kankor-info.html">Kankor Info</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="subjects.html">Subjects</a>
+        <a href="library.html">Library</a>
+        <a href="auth.html">Login</a>
+      </nav>
+    <div class="nav-actions"><a class="btn btn-primary" href="student-home.html">Start Learning</a><a class="btn btn-secondary" href="auth.html">Login</a></div>
+    <button class="mobile-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+<main data-i18n-scope>
+  <section class="page-hero practice-hero">
+    <div class="container practice-hero-grid">
+      <div>
+        <div class="breadcrumb" data-i18n="practiceBreadcrumb">Home / Practice</div>
+        <span class="eyebrow" data-i18n="practiceEyebrow">MCQ Practice</span>
+        <h1 data-i18n="practiceTitle">Practise one question at a time.</h1>
+        <p data-i18n="practiceLead">Choose a subject, select your language, answer questions, and review explanations. This is the first working learning feature of KEP.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#quizApp" data-i18n="practiceStartHero">Start quiz</a><a class="btn btn-secondary" href="girls-education.html" data-i18n="practiceGirlsHero">Girls Education Space</a></div>
+      </div>
+      <div class="practice-preview-card">
+        <span class="small" data-i18n="practicePreviewLabel">KEP learning loop</span>
+        <div class="practice-loop"><span>1</span><b data-i18n="loopChoose">Choose</b></div>
+        <div class="practice-loop"><span>2</span><b data-i18n="loopAnswer">Answer</b></div>
+        <div class="practice-loop"><span>3</span><b data-i18n="loopReview">Review</b></div>
+        <div class="practice-loop"><span>4</span><b data-i18n="loopImprove">Improve</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="quizApp">
+    <div class="container">
+      <div class="section-head">
+        <div><span class="eyebrow" data-i18n="quizEngineEyebrow">Working demo</span><h2 data-i18n="quizEngineTitle">KEP Practice Engine</h2></div>
+        <p data-i18n="quizEngineLead">Use sample questions, or load live questions that you have reviewed and marked as Published in Google Sheets.</p>
+      </div>
+
+      <div class="card practice-live-card" data-practice-live-card>
+        <div>
+          <span class="eyebrow">KEP v3.2 live practice</span>
+          <h3>Load published questions from Google Sheets.</h3>
+          <p class="small">Paste the same Apps Script Web App URL used in the Review Dashboard. Only questions marked <strong>Published</strong> will be added to Practice MCQs.</p>
+        </div>
+        <div class="connector-controls compact">
+          <label class="field"><span>Apps Script Web App URL</span><input type="url" data-practice-live-api-url placeholder="https://script.google.com/macros/s/.../exec"></label>
+          <div class="small-actions">
+            <button class="btn btn-primary" type="button" data-load-published-questions>Load published questions</button>
+            <button class="btn btn-secondary" type="button" data-save-practice-api>Save URL</button>
+            <button class="btn btn-ghost" type="button" data-use-sample-questions>Use samples</button>
+          </div>
+          <p class="small" data-published-api-status>Sample questions are loaded.</p>
+          <div class="question-bank-summary" data-question-bank-summary>Question bank summary will appear here.</div>
+        </div>
+      </div>
+
+      <div class="quiz-app" data-kep-quiz>
+        <aside class="quiz-settings card">
+          <h3 data-i18n="quizSettingsTitle">Quiz settings</h3>
+          <label><span data-i18n="quizSubjectLabel">Subject</span><select data-quiz-subject></select></label>
+          <label><span data-i18n="quizLanguageLabel">Question language</span><select data-quiz-language><option value="en">English</option><option value="ps">پښتو</option><option value="fa">دری</option></select></label>
+          <label><span data-i18n="quizCountLabel">Number of questions</span><select data-quiz-count><option value="3">3</option><option value="5">5</option><option value="10">10</option></select></label>
+          <div class="quiz-bank-mini" data-quiz-bank-mini>Choose a subject to see available questions.</div>
+          <button class="btn btn-primary full" type="button" data-start-quiz data-i18n="startQuizBtn">Start Quiz</button>
+          <div class="quiz-note"><strong data-i18n="privacyMiniTitle">Private by design</strong><p data-i18n="privacyMiniText">For now no login is needed. Students can practise without sharing personal information.</p></div>
+        </aside>
+
+        <section class="quiz-stage card">
+          <div class="quiz-empty" data-quiz-empty>
+            <div class="icon green">⚡</div>
+            <h3 data-i18n="emptyQuizTitle">Ready when you are.</h3>
+            <p data-i18n="emptyQuizText">Choose your subject and language, then start. KEP will show your score and explanations at the end.</p>
+          </div>
+
+          <div class="quiz-live" data-quiz-live hidden>
+            <div class="quiz-topline"><span data-quiz-progress-text>Question 1 of 3</span><span data-quiz-score-pill>0 correct</span></div>
+            <div class="progress quiz-progress"><span data-quiz-progress style="width:0%"></span></div>
+            <h3 class="quiz-question" data-quiz-question></h3>
+            <p class="small quiz-source-line" data-quiz-source></p>
+            <div class="quiz-options" data-quiz-options></div>
+            <div class="quiz-feedback" data-quiz-feedback hidden></div>
+          </div>
+
+          <div class="quiz-results" data-quiz-results hidden>
+            <span class="eyebrow" data-i18n="resultsEyebrow">Result</span>
+            <h3 data-quiz-result-title></h3>
+            <p data-quiz-result-summary></p>
+            <div class="result-insight" data-result-insight></div>
+            <div class="result-stats"><div><strong data-final-score>0/0</strong><span data-i18n="scoreLabel">Score</span></div><div><strong data-final-percent>0%</strong><span data-i18n="percentLabel">Percentage</span></div><div><strong data-final-subject>Math</strong><span data-i18n="subjectLabel">Subject</span></div></div>
+            <div class="answer-review" data-answer-review></div>
+            <div class="hero-actions"><button class="btn btn-primary" type="button" data-restart-quiz data-i18n="tryAgainBtn">Try again</button><button class="btn btn-secondary" type="button" data-practice-wrong-answers>Practise wrong answers</button><a class="btn btn-secondary" href="mock-exam.html" data-i18n="mockNextBtn">Go to mock exam</a></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container grid-4">
+      <div class="card"><div class="icon green">📘</div><h3 data-i18n="modeSubjectTitle">Subject Quiz</h3><p data-i18n="modeSubjectText">Focus on one subject and build strong basics.</p></div>
+      <div class="card"><div class="icon gold">🎯</div><h3 data-i18n="modeWeakTitle">Weak Area Quiz</h3><p data-i18n="modeWeakText">Later, KEP will repeat questions from your mistakes.</p></div>
+      <div class="card"><div class="icon sky">⏱️</div><h3 data-i18n="modeTimedTitle">Timed Quiz</h3><p data-i18n="modeTimedText">Practise speed and confidence before mock exams.</p></div>
+      <div class="card"><div class="icon">🌱</div><h3 data-i18n="modeGirlsTitle">Private Study</h3><p data-i18n="modeGirlsText">Designed to support students who need quiet, safe learning access.</p></div>
+    </div>
+  </section>
+</main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+<footer class="footer"><div class="container footer-bottom"><span>© 2026 KEP.</span><span data-i18n="footerDot">Prepare dot by dot.</span></div></footer><script src="nav-layout.js"></script>
+  <script src="app.js"></script></body>
+</html>

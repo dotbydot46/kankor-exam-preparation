@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Home — KEP</title>
+  <meta name="description" content="KEP student home dashboard with today's task, progress, weak subjects, study plan, and recommendations.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="KEP home">
+        <img src="assets/logo.svg" alt="KEP logo">
+      </a>
+      <nav class="nav-links">
+        <a href="student-home.html" class="active">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="study-plan-db.html">Study Plan</a>
+        <a href="library-db.html">Library</a>
+        <a href="student-db.html">Profile</a>
+      </nav>
+      <div class="nav-actions"><a class="btn btn-primary" href="mock-db.html">Take Mock</a><a class="btn btn-secondary" href="study-plan-db.html">Study Plan</a></div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero compact-hero student-home-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">KEP v5.8 • Student Home</span>
+          <h1 data-v45-welcome>Welcome to your KEP dashboard.</h1>
+          <p class="lead">A cleaner student space for today’s task, practice, mock exam, weak subjects, and study plan.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button" data-v45-load>Load my dashboard</button>
+            <a class="btn btn-secondary" href="study-plan-db.html">Generate Study Plan</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Dashboard status</h2>
+          <p data-v45-status>Login and load your database dashboard.</p>
+          <div class="security-note">This page reads your database profile and progress. It does not show private progress publicly.</div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section v53-quick-start">
+      <div class="container">
+        <div class="student-app-card">
+          <div>
+            <span class="eyebrow">Start here</span>
+            <h2>Your next learning action</h2>
+            <p>Choose one simple action. KEP will become powerful when students repeat this daily: practise, review, improve.</p>
+          </div>
+          <div class="student-action-grid">
+            <a href="practice-db.html"><b>Practice</b><span>Answer approved questions</span></a>
+            <a href="mock-db.html"><b>Mock exam</b><span>Train with time pressure</span></a>
+            <a href="study-plan-db.html"><b>Study plan</b><span>Build a weekly plan</span></a>
+            <a href="progress-analytics.html"><b>Progress</b><span>See scores and weak subjects</span></a>
+            <a href="library-db.html"><b>Library</b><span>Read trusted resources</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="student-home-grid">
+          <section class="student-main-column">
+            <div class="card today-card">
+              <span class="eyebrow">Today</span>
+              <h2>Today’s best next step</h2>
+              <div data-v45-today>
+                <div class="empty-state-soft"><b>No task yet.</b><span>Load your dashboard to generate today’s task.</span></div>
+              </div>
+            </div>
+
+            <div class="db-stat-grid" data-v45-stats>
+              <div><b>0</b><span>Attempts</span></div>
+              <div><b>0%</b><span>Average</span></div>
+              <div><b>0%</b><span>Latest</span></div>
+              <div><b>—</b><span>Weak subject</span></div>
+            </div>
+
+            <div class="card">
+              <div class="section-mini-head">
+                <div>
+                  <span class="eyebrow">Study plan</span>
+                  <h2>Current weekly plan</h2>
+                </div>
+                <a class="btn btn-secondary" href="study-plan-db.html">Open Study Plan</a>
+              </div>
+              <div class="weekly-plan-grid compact" data-v45-plan>
+                <div class="empty-state-soft"><b>No saved plan found.</b><span>Generate a plan after you have at least one practice or mock attempt.</span></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="section-mini-head">
+                <div>
+                  <span class="eyebrow">Review</span>
+                  <h2>Wrong answers to revisit</h2>
+                </div>
+                <a class="btn btn-secondary" href="practice-db.html">Practise again</a>
+              </div>
+              <div data-v45-wrong-list>
+                <p class="small">No wrong answers loaded yet.</p>
+              </div>
+            </div>
+          </section>
+
+          <aside class="student-side-column">
+            <div class="card">
+              <span class="eyebrow">Profile</span>
+              <h2 data-v45-profile-name>Student</h2>
+              <div class="profile-mini-list" data-v45-profile>
+                <p class="small">Profile not loaded.</p>
+              </div>
+              <div class="small-actions">
+                <a class="btn btn-secondary" href="student-db.html">Edit Profile</a>
+                <a class="btn btn-ghost" href="auth.html">Login</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <span class="eyebrow">Recommended</span>
+              <h2>Resources for weak subjects</h2>
+              <div data-v45-resources>
+                <div class="empty-state-soft"><b>No recommendations yet.</b><span>Load dashboard to see resources.</span></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <span class="eyebrow">Quick actions</span>
+              <h2>Continue learning</h2>
+              <div class="quick-action-list">
+                <a href="practice-db.html"><b>Practice DB</b><span>Practise approved questions</span></a>
+                <a href="mock-db.html"><b>Mock DB</b><span>Take timed mock exam</span></a>
+                <a href="library-db.html"><b>Library DB</b><span>Read approved resources</span></a>
+                <a href="study-plan-db.html"><b>Study Plan</b><span>Generate weekly plan</span></a>
+                <a href="girls-pathway.html"><b>Girls Pathway</b><span>Private self-study path</span></a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="supabase-config.js"></script>
+  <script src="app-v4.js"></script>
+  <script src="nav-layout.js"></script>
+  <script src="student-shell.js"></script>
+</body>
+</html>

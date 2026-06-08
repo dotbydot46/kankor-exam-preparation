@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Supabase Setup Walkthrough — KEP v5.1</title>
+  <meta name="description" content="Step-by-step Supabase setup and testing walkthrough for KEP v5.1.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="KEP home">
+        <img src="assets/logo.svg" alt="KEP logo">
+      </a>
+      <nav class="nav-links">
+        <a href="developer-setup.html">Setup Hub</a>
+        <a href="database-setup.html">Database</a>
+        <a href="supabase-setup.html" class="active">Supabase</a>
+        <a href="migrate-to-db.html">Migration</a>
+        <a href="system-review.html">System Review</a>
+        <a href="deployment-checklist.html">Deploy Check</a>
+      </nav>
+      <div class="nav-actions"><a class="btn btn-primary" href="student-home.html">Student View</a><a class="btn btn-secondary" href="admin-home.html">Admin Home</a></div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero compact-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">KEP v5.1 • Real Supabase setup</span>
+          <h1>Make KEP work with a real database.</h1>
+          <p class="lead">Follow this walkthrough slowly: create the project, run SQL in order, connect the public key, create admin, add sample content, and test the full student journey.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#sql-order">SQL order</a>
+            <a class="btn btn-secondary" href="#test-flow">Test flow</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Important rule</h2>
+          <p>Use only the public publishable/anon key in the website. Never paste a service-role or secret key into frontend files.</p>
+          <div class="security-note">RLS policies are part of the safety system. Do not disable them for launch.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="setup-steps">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Step-by-step</span>
+            <h2>Supabase setup path</h2>
+          </div>
+        </div>
+
+        <div class="setup-step-list">
+          <article class="setup-step-card">
+            <span class="step-number">1</span>
+            <div>
+              <h3>Create Supabase project</h3>
+              <p>Create a new project in Supabase and wait until the database is ready.</p>
+            </div>
+          </article>
+
+          <article class="setup-step-card">
+            <span class="step-number">2</span>
+            <div>
+              <h3>Run SQL files in order</h3>
+              <p>Open SQL Editor, paste the files listed below, and run them one by one.</p>
+            </div>
+          </article>
+
+          <article class="setup-step-card">
+            <span class="step-number">3</span>
+            <div>
+              <h3>Connect KEP</h3>
+              <p>Open Database Setup, paste the Supabase project URL and public publishable/anon key, then test connection.</p>
+            </div>
+          </article>
+
+          <article class="setup-step-card">
+            <span class="step-number">4</span>
+            <div>
+              <h3>Create admin account</h3>
+              <p>Open Login, create your account, then set your profile role to <code>admin</code> in Supabase Table Editor.</p>
+            </div>
+          </article>
+
+          <article class="setup-step-card">
+            <span class="step-number">5</span>
+            <div>
+              <h3>Add sample content</h3>
+              <p>Run the sample content SQL or add questions through Admin DB, then publish through Review DB.</p>
+            </div>
+          </article>
+
+          <article class="setup-step-card">
+            <span class="step-number">6</span>
+            <div>
+              <h3>Test student journey</h3>
+              <p>Login as a student and test Student Home, Practice DB, Mock DB, Study Plan, and Library DB.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section" id="sql-order">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">SQL files</span>
+            <h2>Run this order in Supabase SQL Editor</h2>
+            <p>Run the main schema first. Optional patches can be run after it.</p>
+          </div>
+        </div>
+
+        <div class="sql-order-list">
+          <a href="scripts/KEP_v4_0_Supabase_Database.sql"><b>1. Main database schema</b><span>Creates profiles, questions, resources, templates, attempts, policies.</span></a>
+          <a href="scripts/KEP_v4_3_1_Profile_Insert_Policy.sql"><b>2. Profile insert safety policy</b><span>Optional fallback if new profiles cannot save.</span></a>
+          <a href="scripts/KEP_v4_3_Review_Audit_Log.sql"><b>3. Review audit log</b><span>Optional review-event history for admin actions.</span></a>
+          <a href="scripts/KEP_v4_4_Study_Plans_Table.sql"><b>4. Study plans table</b><span>Optional table for saving weekly study plans in Supabase.</span></a>
+          <a href="scripts/KEP_v5_1_Sample_Content.sql"><b>5. Sample content</b><span>Optional test questions, resources, and templates for local testing.</span></a>
+        </div>
+
+        <div class="card">
+          <h3>After running SQL</h3>
+          <p>Open <a href="database-setup.html">Database Setup</a>, paste your Supabase Project URL and public publishable/anon key, then click Test Connection.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="admin-test">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Admin test</span>
+            <h2>Make yourself admin</h2>
+          </div>
+        </div>
+
+        <div class="grid three">
+          <div class="card">
+            <h3>1. Create account</h3>
+            <p>Open Login and create your KEP account with email and password.</p>
+            <a class="btn btn-secondary" href="auth.html">Open Login</a>
+          </div>
+          <div class="card">
+            <h3>2. Change role</h3>
+            <p>In Supabase Table Editor, open <code>profiles</code>, find your user row, and change <code>role</code> to <code>admin</code>.</p>
+          </div>
+          <div class="card">
+            <h3>3. Open Review DB</h3>
+            <p>After role update, open Review DB and check that admin access works.</p>
+            <a class="btn btn-secondary" href="admin-review-db.html">Open Review DB</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section" id="test-flow">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Testing</span>
+            <h2>Full test flow</h2>
+          </div>
+        </div>
+
+        <div class="test-flow-grid">
+          <div class="test-flow-card"><b>1</b><span>Database Setup → Test connection</span></div>
+          <div class="test-flow-card"><b>2</b><span>Login → create student account</span></div>
+          <div class="test-flow-card"><b>3</b><span>Student DB → save profile</span></div>
+          <div class="test-flow-card"><b>4</b><span>Admin DB → add one question</span></div>
+          <div class="test-flow-card"><b>5</b><span>Review DB → publish question</span></div>
+          <div class="test-flow-card"><b>6</b><span>Practice DB → answer question</span></div>
+          <div class="test-flow-card"><b>7</b><span>Mock DB → take short mock</span></div>
+          <div class="test-flow-card"><b>8</b><span>Study Plan → generate plan</span></div>
+          <div class="test-flow-card"><b>9</b><span>Student Home → check today’s task</span></div>
+          <div class="test-flow-card"><b>10</b><span>Library DB → open resource</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="errors">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Troubleshooting</span>
+            <h2>Common problems and fixes</h2>
+          </div>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>“Connection failed” on Database Setup</summary>
+            <p>Check the project URL and public key. Make sure you did not paste a secret/service-role key. Make sure the main v4.0 SQL was run.</p>
+          </details>
+          <details>
+            <summary>“Logged in but role is student” on Review DB</summary>
+            <p>Open Supabase Table Editor → profiles → your row → set role to <code>admin</code> or <code>reviewer</code>.</p>
+          </details>
+          <details>
+            <summary>Practice DB loads zero questions</summary>
+            <p>Add a question and mark its status as <code>published</code>, or run the sample content SQL.</p>
+          </details>
+          <details>
+            <summary>Library DB loads zero resources</summary>
+            <p>Add resources to the <code>resources</code> table with status <code>published</code>, or run the sample content SQL.</p>
+          </details>
+          <details>
+            <summary>Study plan does not save to database</summary>
+            <p>Run <code>scripts/KEP_v4_4_Study_Plans_Table.sql</code>. The page still saves a local fallback even without the table.</p>
+          </details>
+          <details>
+            <summary>Old header or logo appears</summary>
+            <p>Hard refresh the page or clear old service worker/browser cache. v5.1 uses the consistent header/logo system.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="nav-layout.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "KEP - Kankor Exam Preparation",
+  "short_name": "KEP",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0B1F4D",
+  "description": "A modern, mobile-first Kankor preparation platform for Afghan students."
+}

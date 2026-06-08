@@ -1,0 +1,51 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Practice from Database — KEP</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script></head><body><header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="KEP home">
+      <img src="assets/logo.svg" alt="KEP logo">
+    </a>
+    <nav class="nav-links">
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html" class="active">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="study-plan-db.html">Study Plan</a>
+        <a href="library-db.html">Library</a>
+        <a href="student-db.html">Profile</a>
+      </nav>
+    <div class="nav-actions"><a class="btn btn-primary" href="mock-db.html">Take Mock</a><a class="btn btn-secondary" href="study-plan-db.html">Study Plan</a></div>
+    <button class="mobile-toggle" aria-label="Menu">☰</button>
+  </div>
+</header><main><section class="hero compact-hero"><div class="hero-bg"></div><div class="container hero-grid"><div><span class="eyebrow">KEP v4.0 • Published questions</span><h1>Practice from the real database.</h1><p class="lead">Loads published questions from Supabase and saves your result to your logged-in account.</p></div><div class="hero-card"><h2>Database mode</h2><p data-practice-db-status>Ready to load published questions.</p><div class="small-actions"><button class="btn btn-primary" type="button" data-load-db-questions>Load questions</button><a class="btn btn-secondary" href="database-setup.html">Setup</a></div></div></div></section>
+<section class="section"><div class="container"><div class="library-live-toolbar"><div class="library-filter-selects"><select data-db-practice-subject><option value="All">All subjects</option></select><select data-db-practice-count><option value="5">5 questions</option><option value="10">10 questions</option><option value="20">20 questions</option></select></div><button class="btn btn-primary" type="button" data-start-db-practice>Start practice</button></div><div class="mock-exam-shell" data-db-practice-shell hidden><div class="mock-topbar"><div><span class="eyebrow">Database Practice</span><h2 data-db-practice-title>Question 1</h2></div></div><div class="mock-progress-line"><span data-db-practice-progress></span></div><div class="card mock-question-card"><div class="question-meta"><span data-db-practice-subject-label>Subject</span></div><h3 data-db-practice-question>Question text</h3><div class="mock-options" data-db-practice-options></div></div><div class="mock-nav"><button class="btn btn-secondary" type="button" data-db-practice-prev>Previous</button><button class="btn btn-secondary" type="button" data-db-practice-next>Next</button><button class="btn btn-primary" type="button" data-db-practice-submit>Submit</button></div></div><div class="mock-results" data-db-practice-results hidden></div></div></section></main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+<script src="supabase-config.js"></script><script src="app-v4.js"></script>  <script src="nav-layout.js"></script>
+  <script src="student-shell.js"></script>
+</body></html>

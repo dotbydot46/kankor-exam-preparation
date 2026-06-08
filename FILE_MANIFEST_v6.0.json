@@ -1,0 +1,752 @@
+[
+  {
+    "path": ".gitignore",
+    "size": 140,
+    "sha256_16": "1a6638ef78274432"
+  },
+  {
+    "path": "KEP_v2_6_Submission_System_Guide.md",
+    "size": 2664,
+    "sha256_16": "8f1f5ab1d0aa3b89"
+  },
+  {
+    "path": "KEP_v2_7_Google_Forms_Sheets_Setup_Guide.md",
+    "size": 3038,
+    "sha256_16": "c11825f2ddabaf6a"
+  },
+  {
+    "path": "KEP_v2_9_Content_Review_Dashboard_Guide.md",
+    "size": 1177,
+    "sha256_16": "419aacf3430f6052"
+  },
+  {
+    "path": "KEP_v3_0_Google_Sheets_Live_Connection_Guide.md",
+    "size": 1855,
+    "sha256_16": "d6e226274ca45b7b"
+  },
+  {
+    "path": "KEP_v3_10_Kankor_Rules_Template_Manager_Guide.md",
+    "size": 1709,
+    "sha256_16": "6b8b03f24b8b4a29"
+  },
+  {
+    "path": "KEP_v3_1_Save_Review_Status_Guide.md",
+    "size": 2004,
+    "sha256_16": "08075fb385626977"
+  },
+  {
+    "path": "KEP_v3_2_Published_Questions_to_Practice_Guide.md",
+    "size": 1208,
+    "sha256_16": "ec14563a73c0ef85"
+  },
+  {
+    "path": "KEP_v3_3_Practice_Page_Upgrade_Guide.md",
+    "size": 1313,
+    "sha256_16": "938b3e65b9f45352"
+  },
+  {
+    "path": "KEP_v3_4_Student_Dashboard_Guide.md",
+    "size": 1534,
+    "sha256_16": "dc8a91bec420dd93"
+  },
+  {
+    "path": "KEP_v3_5_Student_Profile_Weekly_Plan_Guide.md",
+    "size": 1244,
+    "sha256_16": "b3619ff8f095055a"
+  },
+  {
+    "path": "KEP_v3_6_Girls_Self_Study_Pathway_Guide.md",
+    "size": 1126,
+    "sha256_16": "d072a79116d99cbe"
+  },
+  {
+    "path": "KEP_v3_7_Study_Packs_Guide.md",
+    "size": 1310,
+    "sha256_16": "0a29d504d9ce74f4"
+  },
+  {
+    "path": "KEP_v3_8_Live_Library_Resources_Guide.md",
+    "size": 1230,
+    "sha256_16": "530ad580d883ccea"
+  },
+  {
+    "path": "KEP_v3_9_Mock_Exam_Guide.md",
+    "size": 1125,
+    "sha256_16": "82582217fb2fffaf"
+  },
+  {
+    "path": "KEP_v4_0_Database_Login_Guide.md",
+    "size": 1570,
+    "sha256_16": "410f579a88d4ce60"
+  },
+  {
+    "path": "KEP_v4_1_Google_Sheets_to_Supabase_Migration_Guide.md",
+    "size": 1881,
+    "sha256_16": "a7ff4b3e30185aac"
+  },
+  {
+    "path": "KEP_v4_2_Supabase_Library_Mock_Guide.md",
+    "size": 1862,
+    "sha256_16": "7fbaeff3b3f120e0"
+  },
+  {
+    "path": "KEP_v4_3_1_Quality_Check_Report.md",
+    "size": 1590,
+    "sha256_16": "07bf94d9f4c2ea69"
+  },
+  {
+    "path": "KEP_v4_3_2_Header_Consistency_Report.md",
+    "size": 1178,
+    "sha256_16": "da9683015edaeac1"
+  },
+  {
+    "path": "KEP_v4_3_Admin_Review_Dashboard_Guide.md",
+    "size": 1796,
+    "sha256_16": "c751fc7f4884cea8"
+  },
+  {
+    "path": "KEP_v4_4_Check_Report.md",
+    "size": 258,
+    "sha256_16": "b03d1941ee37906b"
+  },
+  {
+    "path": "KEP_v4_4_Database_Study_Plan_Guide.md",
+    "size": 1300,
+    "sha256_16": "8c840d43066df3dc"
+  },
+  {
+    "path": "KEP_v4_5_Check_Report.md",
+    "size": 258,
+    "sha256_16": "e2e94c2e0cdc1a8b"
+  },
+  {
+    "path": "KEP_v4_5_Student_Home_Guide.md",
+    "size": 1184,
+    "sha256_16": "2de28cc3bbd41e8b"
+  },
+  {
+    "path": "KEP_v5_0_Check_Report.md",
+    "size": 347,
+    "sha256_16": "cbdc5c9a9d7f0aa7"
+  },
+  {
+    "path": "KEP_v5_0_Full_System_Review_Report.md",
+    "size": 2535,
+    "sha256_16": "ef15666a680cc6ee"
+  },
+  {
+    "path": "KEP_v5_1_1_AI_Automation_Roadmap.md",
+    "size": 1927,
+    "sha256_16": "2d77f3c45ae7627c"
+  },
+  {
+    "path": "KEP_v5_1_1_Check_Report.md",
+    "size": 501,
+    "sha256_16": "6c8b8292bc0f3138"
+  },
+  {
+    "path": "KEP_v5_1_1_Mock_Fix_Guide.md",
+    "size": 859,
+    "sha256_16": "5df1af27166cf561"
+  },
+  {
+    "path": "KEP_v5_1_Check_Report.md",
+    "size": 347,
+    "sha256_16": "3d29d4a5453e3274"
+  },
+  {
+    "path": "KEP_v5_1_Supabase_Setup_Walkthrough_Guide.md",
+    "size": 1526,
+    "sha256_16": "670923b13d7d3422"
+  },
+  {
+    "path": "KEP_v5_2_Check_Report.md",
+    "size": 435,
+    "sha256_16": "ce5bf5cb4e1e662a"
+  },
+  {
+    "path": "KEP_v5_2_Final_Navigation_Guide.md",
+    "size": 785,
+    "sha256_16": "f0c7fff7fdeef2b7"
+  },
+  {
+    "path": "KEP_v5_3_Check_Report.md",
+    "size": 533,
+    "sha256_16": "9534270d5e69c5ba"
+  },
+  {
+    "path": "KEP_v5_3_Mobile_Student_Experience_Guide.md",
+    "size": 1145,
+    "sha256_16": "e08784d6528cd162"
+  },
+  {
+    "path": "KEP_v5_4_AI_Review_Assistant_Guide.md",
+    "size": 1308,
+    "sha256_16": "467f1d3a8802279a"
+  },
+  {
+    "path": "KEP_v5_4_Check_Report.md",
+    "size": 623,
+    "sha256_16": "7a5b48358e3b74fd"
+  },
+  {
+    "path": "KEP_v5_4_Future_AI_Backend_Plan.md",
+    "size": 1139,
+    "sha256_16": "0cd0759d3820ace0"
+  },
+  {
+    "path": "KEP_v5_5_AI_Backend_Safety_Checklist.md",
+    "size": 789,
+    "sha256_16": "4b1e85c8da340eb3"
+  },
+  {
+    "path": "KEP_v5_5_AI_Edge_Function_Setup_Guide.md",
+    "size": 1754,
+    "sha256_16": "d161f0f8b058171c"
+  },
+  {
+    "path": "KEP_v5_5_Check_Report.md",
+    "size": 758,
+    "sha256_16": "8ee00d8c94352c6d"
+  },
+  {
+    "path": "KEP_v5_6_AI_Suggestions_Workflow_Guide.md",
+    "size": 1232,
+    "sha256_16": "08140dc0158e4d4a"
+  },
+  {
+    "path": "KEP_v5_6_Check_Report.md",
+    "size": 760,
+    "sha256_16": "7174c4c838800580"
+  },
+  {
+    "path": "KEP_v5_7_Check_Report.md",
+    "size": 853,
+    "sha256_16": "aaf20a914e5394f3"
+  },
+  {
+    "path": "KEP_v5_7_Content_Quality_Dashboard_Guide.md",
+    "size": 1207,
+    "sha256_16": "54a06d37ad8cf64b"
+  },
+  {
+    "path": "KEP_v5_8_Check_Report.md",
+    "size": 836,
+    "sha256_16": "28d60318fe6e89d7"
+  },
+  {
+    "path": "KEP_v5_8_Student_Progress_Analytics_Guide.md",
+    "size": 1093,
+    "sha256_16": "15fbd1df9a796a65"
+  },
+  {
+    "path": "KEP_v5_9_Check_Report.md",
+    "size": 851,
+    "sha256_16": "839d3149bcdacbb6"
+  },
+  {
+    "path": "KEP_v5_9_Public_Launch_Polish_Guide.md",
+    "size": 1387,
+    "sha256_16": "9bc5370f3d1e26f8"
+  },
+  {
+    "path": "README.md",
+    "size": 15977,
+    "sha256_16": "3e9562a69557a771"
+  },
+  {
+    "path": "_headers",
+    "size": 203,
+    "sha256_16": "45f824f4f6f01c2e"
+  },
+  {
+    "path": "about.html",
+    "size": 5506,
+    "sha256_16": "c95c0a80fc8701be"
+  },
+  {
+    "path": "admin-db.html",
+    "size": 4792,
+    "sha256_16": "45cb6ddc4df067ad"
+  },
+  {
+    "path": "admin-home.html",
+    "size": 4535,
+    "sha256_16": "0e8d3943dac45cfb"
+  },
+  {
+    "path": "admin-review-db.html",
+    "size": 7470,
+    "sha256_16": "3bec74ff70e1756d"
+  },
+  {
+    "path": "admin.html",
+    "size": 4898,
+    "sha256_16": "50dcee4f49c8689f"
+  },
+  {
+    "path": "ai-automation.html",
+    "size": 7369,
+    "sha256_16": "6d69482e60c44e6f"
+  },
+  {
+    "path": "ai-edge-client.js",
+    "size": 3001,
+    "sha256_16": "6230d53350af1105"
+  },
+  {
+    "path": "ai-edge-setup.html",
+    "size": 5839,
+    "sha256_16": "df03e276830d3e52"
+  },
+  {
+    "path": "ai-review-assistant.html",
+    "size": 8320,
+    "sha256_16": "2a3fb5dee8684ea2"
+  },
+  {
+    "path": "ai-review-assistant.js",
+    "size": 8332,
+    "sha256_16": "bea223f09e411e70"
+  },
+  {
+    "path": "ai-suggestion-save.js",
+    "size": 2136,
+    "sha256_16": "6ac89d2c2e236e8c"
+  },
+  {
+    "path": "ai-suggestions-db.html",
+    "size": 4932,
+    "sha256_16": "2601147353fc67ce"
+  },
+  {
+    "path": "ai-suggestions-db.js",
+    "size": 7507,
+    "sha256_16": "2c67beb207b21fcc"
+  },
+  {
+    "path": "app-v4-migration.js",
+    "size": 8611,
+    "sha256_16": "122a9ff3c2cd9cfd"
+  },
+  {
+    "path": "app-v4.js",
+    "size": 75674,
+    "sha256_16": "b0457d0fb75304ac"
+  },
+  {
+    "path": "app.js",
+    "size": 152194,
+    "sha256_16": "4de81976d145bdec"
+  },
+  {
+    "path": "assets/hero-pattern.svg",
+    "size": 1027,
+    "sha256_16": "2ddba1fe45c6ec6f"
+  },
+  {
+    "path": "assets/kep-logo.svg",
+    "size": 1528,
+    "sha256_16": "f6b9cd635735542c"
+  },
+  {
+    "path": "assets/logo.svg",
+    "size": 1528,
+    "sha256_16": "f6b9cd635735542c"
+  },
+  {
+    "path": "auth.html",
+    "size": 4001,
+    "sha256_16": "a3f4e0c57e3374a8"
+  },
+  {
+    "path": "contact.html",
+    "size": 4582,
+    "sha256_16": "ebaf5ede61862372"
+  },
+  {
+    "path": "content-quality-db.html",
+    "size": 5939,
+    "sha256_16": "1d6ef5a4d2ca39b6"
+  },
+  {
+    "path": "content-quality-db.js",
+    "size": 13820,
+    "sha256_16": "d1b177407e62b191"
+  },
+  {
+    "path": "content-submission-schema.json",
+    "size": 603,
+    "sha256_16": "9d4a4950f4592c0a"
+  },
+  {
+    "path": "dashboard.html",
+    "size": 12589,
+    "sha256_16": "777f028ed745ef79"
+  },
+  {
+    "path": "database-setup.html",
+    "size": 4930,
+    "sha256_16": "b6effe425b345704"
+  },
+  {
+    "path": "deploy-guide.html",
+    "size": 5240,
+    "sha256_16": "b88d0435562b71e2"
+  },
+  {
+    "path": "deployment-checklist.html",
+    "size": 7182,
+    "sha256_16": "ed4fd656faa78478"
+  },
+  {
+    "path": "developer-setup.html",
+    "size": 5008,
+    "sha256_16": "1bcc53c1a399f883"
+  },
+  {
+    "path": "docs/KEP_v6_0_Deployment_Guide.md",
+    "size": 1389,
+    "sha256_16": "612b0899cfffa8cd"
+  },
+  {
+    "path": "docs/KEP_v6_0_Release_Notes.md",
+    "size": 779,
+    "sha256_16": "be85ad6b9b517664"
+  },
+  {
+    "path": "docs/KEP_v6_0_Security_Checklist.md",
+    "size": 876,
+    "sha256_16": "42762039f7cc69b1"
+  },
+  {
+    "path": "form-links.json",
+    "size": 882,
+    "sha256_16": "0288aa5653227d22"
+  },
+  {
+    "path": "girls-education.html",
+    "size": 7296,
+    "sha256_16": "bd23acfde1c19081"
+  },
+  {
+    "path": "girls-pathway.html",
+    "size": 27145,
+    "sha256_16": "97fc9528c7249e6c"
+  },
+  {
+    "path": "google-forms.html",
+    "size": 7501,
+    "sha256_16": "bcb95f2656a4a783"
+  },
+  {
+    "path": "index.html",
+    "size": 22778,
+    "sha256_16": "4b5a21895fbb0844"
+  },
+  {
+    "path": "kankor-info.html",
+    "size": 4715,
+    "sha256_16": "4d8dd6e5f68accad"
+  },
+  {
+    "path": "kankor-rules.html",
+    "size": 9146,
+    "sha256_16": "dd8a459ddf0cb17a"
+  },
+  {
+    "path": "launch-mode.html",
+    "size": 3713,
+    "sha256_16": "f88ad34b86c459a5"
+  },
+  {
+    "path": "library-db.html",
+    "size": 4863,
+    "sha256_16": "ed28b73bcc77604f"
+  },
+  {
+    "path": "library.html",
+    "size": 8026,
+    "sha256_16": "1516e24c319015b9"
+  },
+  {
+    "path": "manifest.json",
+    "size": 278,
+    "sha256_16": "c0624f33b6470d0d"
+  },
+  {
+    "path": "migrate-to-db.html",
+    "size": 7237,
+    "sha256_16": "3345da3c3c710f8d"
+  },
+  {
+    "path": "mock-db.html",
+    "size": 8449,
+    "sha256_16": "6265f81e23406412"
+  },
+  {
+    "path": "mock-exam.html",
+    "size": 4244,
+    "sha256_16": "e067bf5a9bd8a21d"
+  },
+  {
+    "path": "mock.html",
+    "size": 10341,
+    "sha256_16": "2aef8a10a1139495"
+  },
+  {
+    "path": "nav-layout.js",
+    "size": 3714,
+    "sha256_16": "c734eb6cb01ce7ef"
+  },
+  {
+    "path": "netlify.toml",
+    "size": 455,
+    "sha256_16": "ab611b46bc8ca5d3"
+  },
+  {
+    "path": "practice-db.html",
+    "size": 4421,
+    "sha256_16": "615a893db4cb0e32"
+  },
+  {
+    "path": "practice.html",
+    "size": 9646,
+    "sha256_16": "44d73c4561366116"
+  },
+  {
+    "path": "privacy.html",
+    "size": 4693,
+    "sha256_16": "1a8c79750e5b53fd"
+  },
+  {
+    "path": "production-checklist.html",
+    "size": 5305,
+    "sha256_16": "300338547511f982"
+  },
+  {
+    "path": "progress-analytics.html",
+    "size": 5889,
+    "sha256_16": "53a2ad1749f52749"
+  },
+  {
+    "path": "progress-analytics.js",
+    "size": 13343,
+    "sha256_16": "a22671e17db470ff"
+  },
+  {
+    "path": "public-launch-checklist.html",
+    "size": 4860,
+    "sha256_16": "033c80c3033c2b94"
+  },
+  {
+    "path": "release-notes.html",
+    "size": 3685,
+    "sha256_16": "646f5e89f0f9e196"
+  },
+  {
+    "path": "review-dashboard.html",
+    "size": 9211,
+    "sha256_16": "491e1a8c751bcc62"
+  },
+  {
+    "path": "robots.txt",
+    "size": 137,
+    "sha256_16": "d7863f643b13e1b8"
+  },
+  {
+    "path": "scripts/KEP_Google_Forms_Auto_Setup.gs",
+    "size": 14216,
+    "sha256_16": "3a0c518b4f1ec54e"
+  },
+  {
+    "path": "scripts/KEP_Google_Sheets_Web_API.gs",
+    "size": 9796,
+    "sha256_16": "747004ddeb00c4b7"
+  },
+  {
+    "path": "scripts/KEP_Google_Sheets_Web_API_v3_1.gs",
+    "size": 9796,
+    "sha256_16": "747004ddeb00c4b7"
+  },
+  {
+    "path": "scripts/KEP_Google_Sheets_Web_API_v3_2.gs",
+    "size": 14124,
+    "sha256_16": "b14e3bbe98043091"
+  },
+  {
+    "path": "scripts/KEP_Google_Sheets_Web_API_v3_8.gs",
+    "size": 17441,
+    "sha256_16": "966cbda01e2c70c6"
+  },
+  {
+    "path": "scripts/KEP_Google_Sheets_Web_API_v3_9.gs",
+    "size": 17441,
+    "sha256_16": "57ed6d230064a6d6"
+  },
+  {
+    "path": "scripts/KEP_v4_0_Supabase_Database.sql",
+    "size": 9931,
+    "sha256_16": "441349c52391b995"
+  },
+  {
+    "path": "scripts/KEP_v4_1_RLS_Admin_Status_Policies.sql",
+    "size": 1275,
+    "sha256_16": "972ab3fda79e575d"
+  },
+  {
+    "path": "scripts/KEP_v4_3_1_Profile_Insert_Policy.sql",
+    "size": 455,
+    "sha256_16": "3777aa29bfffd18e"
+  },
+  {
+    "path": "scripts/KEP_v4_3_Review_Audit_Log.sql",
+    "size": 941,
+    "sha256_16": "d9a252ec63450927"
+  },
+  {
+    "path": "scripts/KEP_v4_4_Study_Plans_Table.sql",
+    "size": 843,
+    "sha256_16": "06f2dc9eb498a07f"
+  },
+  {
+    "path": "scripts/KEP_v5_1_1_Demo_Content_Boost.sql",
+    "size": 21694,
+    "sha256_16": "5e2553da6b86185d"
+  },
+  {
+    "path": "scripts/KEP_v5_1_Sample_Content.sql",
+    "size": 4619,
+    "sha256_16": "4f4028e8bdac15d4"
+  },
+  {
+    "path": "scripts/KEP_v5_4_AI_Review_Suggestions_Table.sql",
+    "size": 2171,
+    "sha256_16": "f98dabfd62f09349"
+  },
+  {
+    "path": "service-worker.js",
+    "size": 5327,
+    "sha256_16": "164d32879e1709a9"
+  },
+  {
+    "path": "sitemap.xml",
+    "size": 3613,
+    "sha256_16": "528b123591aea85c"
+  },
+  {
+    "path": "student-db.html",
+    "size": 5248,
+    "sha256_16": "209a2ecc1c14f6bc"
+  },
+  {
+    "path": "student-experience.html",
+    "size": 3991,
+    "sha256_16": "241dce7afe9c9b20"
+  },
+  {
+    "path": "student-home.html",
+    "size": 8189,
+    "sha256_16": "98c74c920e360bbf"
+  },
+  {
+    "path": "student-shell.js",
+    "size": 1859,
+    "sha256_16": "5d66dbd1e91acfd5"
+  },
+  {
+    "path": "study-packs.html",
+    "size": 15951,
+    "sha256_16": "c02e489f96a03b5c"
+  },
+  {
+    "path": "study-plan-db.html",
+    "size": 7909,
+    "sha256_16": "e10a4bf68be86239"
+  },
+  {
+    "path": "styles.css",
+    "size": 98464,
+    "sha256_16": "927749de717c4b0c"
+  },
+  {
+    "path": "subjects.html",
+    "size": 4826,
+    "sha256_16": "f5f2953e75d76618"
+  },
+  {
+    "path": "submit-content.html",
+    "size": 18822,
+    "sha256_16": "96fb03423bb4642e"
+  },
+  {
+    "path": "supabase/config.toml",
+    "size": 64,
+    "sha256_16": "14d5ae2fb45f3d3a"
+  },
+  {
+    "path": "supabase/functions/.env.example",
+    "size": 190,
+    "sha256_16": "c3395416981425f7"
+  },
+  {
+    "path": "supabase/functions/kep-ai-review/README.md",
+    "size": 327,
+    "sha256_16": "f74e56d2b217fe2e"
+  },
+  {
+    "path": "supabase/functions/kep-ai-review/index.ts",
+    "size": 8463,
+    "sha256_16": "4665a2231d9551db"
+  },
+  {
+    "path": "supabase-config.js",
+    "size": 892,
+    "sha256_16": "17b3f3be10fbaad5"
+  },
+  {
+    "path": "supabase-setup.html",
+    "size": 11342,
+    "sha256_16": "f3fbfe83d76ec5e8"
+  },
+  {
+    "path": "system-review.html",
+    "size": 9244,
+    "sha256_16": "f09eec060551602f"
+  },
+  {
+    "path": "templates/KEP_Content_Governance_Policy.md",
+    "size": 1915,
+    "sha256_16": "7c5b0cb1268094ee"
+  },
+  {
+    "path": "templates/KEP_Form_Question_Blueprints.md",
+    "size": 1995,
+    "sha256_16": "c3649da7b715d038"
+  },
+  {
+    "path": "templates/KEP_Volunteer_Outreach_Messages.md",
+    "size": 1371,
+    "sha256_16": "57163d2992ff446d"
+  },
+  {
+    "path": "templates/google-form-links-template.json",
+    "size": 882,
+    "sha256_16": "0288aa5653227d22"
+  },
+  {
+    "path": "terms.html",
+    "size": 4321,
+    "sha256_16": "d8059edb88a56269"
+  },
+  {
+    "path": "version.json",
+    "size": 390,
+    "sha256_16": "9f28950e00001c8e"
+  },
+  {
+    "path": "volunteer.html",
+    "size": 12798,
+    "sha256_16": "0e460ccc1d3429f8"
+  }
+]

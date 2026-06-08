@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mock Exam — KEP</title>
+  <meta name="description" content="KEP Mock Exam: timed Kankor-style practice using reviewed published questions.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="KEP home">
+      <img src="assets/logo.svg" alt="KEP logo">
+    </a>
+    <nav class="nav-links">
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="study-plan-db.html">Study Plan</a>
+        <a href="library-db.html">Library</a>
+        <a href="student-db.html">Profile</a>
+      </nav>
+    <div class="nav-actions"><a class="btn btn-primary" href="mock-db.html">Take Mock</a><a class="btn btn-secondary" href="study-plan-db.html">Study Plan</a></div>
+    <button class="mobile-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+  <main>
+    <section class="hero compact-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">KEP v3.9 • Mock Exam</span>
+          <h1>Take a timed Kankor-style mock exam.</h1>
+          <p class="lead">Load your reviewed Published questions from Google Sheets, choose a safe exam template, practise under time, and get a clear readiness report.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#mock-builder">Start mock exam</a>
+            <a class="btn btn-secondary" href="review-dashboard.html">Review content</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Important honesty rule</h2>
+          <p>KEP can estimate readiness, but it must not promise official admission, field placement, or university selection.</p>
+          <div class="security-note">Official results and placements depend on NEXA rules, competition, field capacity, and yearly admissions.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="mock-builder">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Build exam</span>
+            <h2>Exam template system</h2>
+            <p>Use Quick Mock now. Later, when the real Kankor subject distribution is verified, update the Full Kankor template without rebuilding the website.</p>
+          </div>
+        </div>
+
+        <div class="mock-layout">
+          <aside class="card mock-control-panel">
+            <h3>1. Connect questions</h3>
+            <label class="field">
+              <span>Apps Script Web App URL</span>
+              <input type="url" data-mock-api-url placeholder="https://script.google.com/macros/s/.../exec">
+            </label>
+            <div class="small-actions">
+              <button class="btn btn-primary" type="button" data-load-mock-questions>Load published questions</button>
+              <button class="btn btn-secondary" type="button" data-save-mock-api>Save URL</button>
+            </div>
+            <p class="small" data-mock-status>Paste the same v3.8 API URL used for Practice and Library.</p>
+
+            <hr class="soft-divider">
+
+            <h3>2. Choose exam type</h3>
+            <label class="field">
+              <span>Exam type</span>
+              <select data-mock-type>
+                <option value="quick">Quick Mock Exam</option>
+                <option value="subject">Subject Mock Exam</option>
+                <option value="full">Full Kankor-style Mock</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Saved exam template</span>
+              <select data-mock-template>
+                <option value="">Default / no saved template</option>
+              </select>
+            </label>
+            <p class="small">Create or update templates in <a href="kankor-rules.html">Exam Rules</a>.</p>
+
+            <label class="field" data-subject-field>
+              <span>Subject</span>
+              <select data-mock-subject>
+                <option value="All">All subjects</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Question count</span>
+              <select data-mock-count>
+                <option value="10">10 questions</option>
+                <option value="20">20 questions</option>
+                <option value="30">30 questions</option>
+                <option value="50">50 questions</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Time limit</span>
+              <select data-mock-time>
+                <option value="10">10 minutes</option>
+                <option value="20">20 minutes</option>
+                <option value="30">30 minutes</option>
+                <option value="60">60 minutes</option>
+                <option value="0">No timer</option>
+              </select>
+            </label>
+
+            <button class="btn btn-primary wide" type="button" data-start-mock>Start exam</button>
+
+            <div class="mock-template-note">
+              <b>Full template status:</b>
+              <span>Subject distribution, total questions, time, and marking rules are marked “To be verified”.</span>
+            </div>
+          </aside>
+
+          <section class="mock-main">
+            <div class="card mock-rules-card">
+              <span class="eyebrow">Verified rules later</span>
+              <h3>Kankor rules research sheet</h3>
+              <p>Before we call anything “real official Kankor format”, we need verified data for total questions, subjects, questions per subject, exam time, and marking rules.</p>
+              <div class="rules-grid">
+                <div><b>Total questions</b><span>To be verified</span></div>
+                <div><b>Exam time</b><span>To be verified</span></div>
+                <div><b>Subject distribution</b><span>To be verified</span></div>
+                <div><b>Marking system</b><span>To be verified</span></div>
+              </div>
+              <div class="small-actions" style="margin-top:16px">
+                <a class="btn btn-secondary" href="kankor-rules.html">Open Rules & Templates</a>
+              </div>
+            </div>
+
+            <div class="mock-exam-shell" data-mock-shell hidden>
+              <div class="mock-topbar">
+                <div>
+                  <span class="eyebrow" data-mock-mode-label>Quick Mock</span>
+                  <h2 data-mock-progress-title>Question 1 of 10</h2>
+                </div>
+                <div class="mock-timer" data-mock-timer>00:00</div>
+              </div>
+
+              <div class="mock-progress-line"><span data-mock-progress-bar></span></div>
+
+              <div class="card mock-question-card">
+                <div class="question-meta">
+                  <span data-mock-question-subject>Subject</span>
+                  <span data-mock-question-difficulty>Difficulty</span>
+                </div>
+                <h3 data-mock-question-text>Question text</h3>
+                <div class="mock-options" data-mock-options></div>
+              </div>
+
+              <div class="mock-nav">
+                <button class="btn btn-secondary" type="button" data-prev-mock>Previous</button>
+                <div class="mock-dots" data-mock-dots></div>
+                <button class="btn btn-secondary" type="button" data-next-mock>Next</button>
+                <button class="btn btn-primary" type="button" data-submit-mock>Submit exam</button>
+              </div>
+            </div>
+
+            <div class="mock-empty card" data-mock-empty>
+              <h3>Load approved questions to begin.</h3>
+              <p>Questions must be submitted, reviewed, and marked <b>Published</b> before they can be used in the mock exam.</p>
+              <div class="small-actions">
+                <a class="btn btn-secondary" href="practice.html">Check Practice MCQs</a>
+                <a class="btn btn-ghost" href="submit-content.html">Submit questions</a>
+              </div>
+            </div>
+
+            <div class="mock-results" data-mock-results hidden></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Safe result guidance</span>
+            <h2>What KEP can and cannot say after a mock exam</h2>
+          </div>
+        </div>
+        <div class="grid three">
+          <div class="card">
+            <h3>KEP can show</h3>
+            <p>Score, percentage, time used, subject breakdown, wrong answers, weak areas, and recommended next study tasks.</p>
+          </div>
+          <div class="card">
+            <h3>KEP can estimate</h3>
+            <p>Readiness level for high-competition fields such as Medicine, Engineering, Computer Science, Law, and Education.</p>
+          </div>
+          <div class="card">
+            <h3>KEP cannot promise</h3>
+            <p>Official admission, exact university placement, passing/failing a field, or future Kankor result. Those belong to official authorities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/kep-logo.svg" alt="KEP logo" class="footer-logo">
+        <p>KEP helps Afghan students prepare for Kankor through learning resources, practice, mock exams, and guidance.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <a href="subjects.html">Subjects</a>
+        <a href="library.html">Library</a>
+        <a href="practice.html">Practice</a>
+        <a href="mock.html">Mock Exam</a>
+      </div>
+      <div>
+        <h4>Mission</h4>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="submit-content.html">Submit Content</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="nav-layout.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

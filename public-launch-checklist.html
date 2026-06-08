@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Public Launch Checklist — KEP</title>
+  <meta name="description" content="Public launch checklist for KEP.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="KEP home">
+        <img src="assets/logo.svg" alt="KEP logo">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="kankor-info.html">Kankor Info</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="subjects.html">Subjects</a>
+        <a href="library.html">Library</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="auth.html">Login</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="student-home.html">Start Learning</a>
+        <a class="btn btn-secondary" href="volunteer.html">Volunteer</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+  <main>
+
+    <section class="hero compact-hero setup-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">KEP v5.9 • Public Launch Polish</span>
+          <h1>Final checks before sharing KEP publicly.</h1>
+          <p class="lead">This page helps you check public pages, student flow, admin tools, privacy wording, and content readiness before a real launch.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="index.html">View Public Home</a>
+            <a class="btn btn-secondary" href="content-quality-db.html">Check Content Quality</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Launch rule</h2>
+          <p>Do not launch to many students until login, practice, mock, progress, content quality, privacy, and contact pages are tested.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container launch-checklist">
+        <div class="card"><span class="eyebrow">Public</span><h2>Public website</h2><ul class="check-list"><li>Home page is clear.</li><li>About page explains mission.</li><li>Privacy and Terms pages exist.</li><li>Contact page has final safe contact details.</li><li>No confusing admin/setup links for students.</li></ul></div>
+        <div class="card"><span class="eyebrow">Student</span><h2>Student flow</h2><ul class="check-list"><li>Signup/login works.</li><li>Practice loads questions.</li><li>Mock exam works.</li><li>Progress page loads attempts.</li><li>Study plan and library are easy to find.</li></ul></div>
+        <div class="card"><span class="eyebrow">Admin</span><h2>Admin & content</h2><ul class="check-list"><li>Content Quality dashboard is checked.</li><li>Review DB can publish/reject.</li><li>AI suggestions remain reviewer-only.</li><li>At least one reviewer/admin account is ready.</li><li>Demo content is labelled if still used.</li></ul></div>
+        <div class="card"><span class="eyebrow">Security</span><h2>Safety</h2><ul class="check-list"><li>No service-role or secret AI key is in frontend.</li><li>Supabase RLS policies are enabled.</li><li>Auth redirect URL is configured for live domain.</li><li>Privacy wording is visible.</li><li>Students are not asked for sensitive documents.</li></ul></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="nav-layout.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

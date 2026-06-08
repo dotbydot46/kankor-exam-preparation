@@ -1,0 +1,95 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Study Packs — KEP</title><meta name="description" content="Printable and low-data KEP self-study packs for Kankor preparation, foundation learning, and girls studying privately from home."><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css"></head><body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="KEP home">
+      <img src="assets/logo.svg" alt="KEP logo">
+    </a>
+    <nav class="nav-links">
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="study-plan-db.html">Study Plan</a>
+        <a href="library-db.html">Library</a>
+        <a href="student-db.html">Profile</a>
+      </nav>
+    <div class="nav-actions"><a class="btn btn-primary" href="mock-db.html">Take Mock</a><a class="btn btn-secondary" href="study-plan-db.html">Study Plan</a></div>
+    <button class="mobile-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+<main>
+<section class="packs-hero"><div class="container packs-hero-grid"><div><div class="breadcrumb">Home / Study Packs</div><span class="eyebrow">KEP v3.7 • Books & self-study packs</span><h1>Turn books, notes, and MCQs into simple weekly packs.</h1><p class="lead">Study packs are printable, low-data learning bundles for students who cannot stay online all the time. They connect the Library, Girls Self-Study Pathway, Practice MCQs, and Weekly Plan into one clear route.</p><div class="hero-actions"><a class="btn btn-primary" href="#pack-builder">Build a pack</a><a class="btn btn-secondary" href="submit-content.html">Submit a resource</a></div><div class="trust-row"><span class="trust-pill">📄 Printable</span><span class="trust-pill">🔒 Private study</span><span class="trust-pill">🌐 Pashto / Dari / English</span><span class="trust-pill">📱 Low-data</span></div></div><aside class="packs-mission-card"><span class="eyebrow">Why packs?</span><h3>Some students need learning they can save, print, share, or use quietly.</h3><p>Instead of forcing every learner to stay online, KEP can deliver weekly PDFs, checklists, short notes, and practice tasks that work from home, village, hostel, or shared devices.</p><div class="pack-mini-flow"><b>Library</b><span>→</span><b>Plan</b><span>→</span><b>Practice</b><span>→</span><b>Review</b></div></aside></div></section>
+<section class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">Pack library</span><h2>Starter self-study packs.</h2></div><p>These are structured sample packs. Later, each pack can contain real PDFs, notes, teacher-reviewed questions, and downloadable files from the KEP database.</p></div><div class="pack-filters"><button class="filter active" data-pack-filter="all">All</button><button class="filter" data-pack-filter="girls">Girls private study</button><button class="filter" data-pack-filter="foundation">Foundation</button><button class="filter" data-pack-filter="kankor">Kankor bridge</button><button class="filter" data-pack-filter="science">Science</button><button class="filter" data-pack-filter="math">Math</button><button class="filter" data-pack-filter="language">Languages</button></div><div class="packs-grid" data-pack-grid></div></div></section>
+<section class="section section-alt" id="pack-builder"><div class="container packs-builder-grid"><div class="card packs-builder-card"><span class="eyebrow">Pack builder</span><h2>Create a simple weekly self-study pack.</h2><p>Choose a learner type, focus, language, and available time. KEP will generate a printable 7-day pack with tasks, revision, and practice links.</p><form class="form-grid pack-builder-form" data-pack-builder-form><label class="field">Learner type<select name="learner"><option value="general">General Kankor student</option><option value="girls">Girl studying privately from home</option><option value="foundation">Foundation learner</option><option value="exam">Exam revision learner</option></select></label><label class="field">Main focus<select name="focus"><option value="math">Mathematics</option><option value="science">Science</option><option value="language">Languages</option><option value="kankor">Mixed Kankor bridge</option><option value="foundation">Foundation recovery</option></select></label><label class="field">Preferred language<select name="language"><option value="en">English</option><option value="ps">Pashto</option><option value="fa">Dari</option></select></label><label class="field">Study time per day<select name="minutes"><option value="20">20 minutes</option><option value="30" selected>30 minutes</option><option value="45">45 minutes</option><option value="60">60 minutes</option></select></label><button class="btn btn-primary" type="submit">Generate weekly pack</button><button class="btn btn-secondary" type="button" data-print-pack>Print / save PDF</button></form><p class="small" data-pack-status>Nothing is saved to a server. This first version stores the generated pack only in this browser.</p></div><div class="packs-output-panel card"><span class="eyebrow">Generated pack</span><h3 data-pack-title>No pack yet.</h3><p data-pack-summary>Use the builder to create a weekly pack.</p><div class="generated-pack-grid" data-generated-pack></div><div class="hero-actions"><a class="btn btn-primary" href="practice.html">Open Practice MCQs</a><a class="btn btn-secondary" href="library.html">Open Library</a></div></div></div></section>
+<section class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">Girls Education support</span><h2>Special packs for quiet, private learning.</h2></div><p>For girls whose school doors were closed, KEP should offer gentle packs that do not ask for unnecessary identity, work offline where possible, and rebuild confidence step by step.</p></div><div class="grid-3"><a class="card" href="girls-pathway.html"><div class="icon green">🕊️</div><h3>Private pathway</h3><p>Build a personal weekly plan without real name, Tazkira, or sensitive details.</p><span class="link">Open pathway →</span></a><div class="card"><div class="icon gold">📘</div><h3>Foundation pack</h3><p>Reading, writing, Math basics, science words, and confidence exercises.</p><span class="link">Prepared for PDF later</span></div><div class="card"><div class="icon sky">🧭</div><h3>Kankor bridge pack</h3><p>Move from missed schooling into subject revision and exam-style MCQs.</p><span class="link">Connects to Practice MCQs</span></div></div></div></section>
+<section class="section section-alt"><div class="container"><div class="section-head"><div><span class="eyebrow">Resource governance</span><h2>Every pack must be useful and trusted.</h2></div><p>Books and notes should not be uploaded randomly. KEP should label source, language, permission, review status, and target learner.</p></div><div class="timeline-grid"><div class="timeline-step"><b>1</b><h3>Collect</h3><p>Volunteer submits a book, note, formula sheet, or practice pack.</p></div><div class="timeline-step"><b>2</b><h3>Check source</h3><p>Mark official, teacher-created, centre-shared, or collected practice material.</p></div><div class="timeline-step"><b>3</b><h3>Review</h3><p>Teacher or strong student checks quality, language, and usefulness.</p></div><div class="timeline-step"><b>4</b><h3>Publish</h3><p>Approved packs become available in the Library, Dashboard, and Girls Pathway.</p></div></div></div></section>
+</main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+<footer class="footer"><div class="container footer-bottom"><span>© 2026 KEP.</span><span>Prepare dot by dot.</span></div></footer><script src="nav-layout.js"></script>
+  <script src="student-shell.js"></script>
+  <script src="app.js"></script><script>
+(function(){
+ const packs=[
+  {id:'girls-quiet',tag:'girls',icon:'🕊️',title:'Quiet Study Pack',type:'Girls private study',language:'Pashto / Dari / English',time:'7 days • 20–30 min/day',desc:'A gentle weekly routine for private learning at home with no identity pressure.',items:['Daily reading note','5 MCQs per day','Confidence sentence','Mistake review'],status:'Template ready'},
+  {id:'foundation-basic',tag:'foundation',icon:'🌱',title:'Foundation Recovery Pack',type:'Foundation',language:'Pashto / Dari',time:'2 weeks • 30 min/day',desc:'For students who missed months or years and need basics before exam pressure.',items:['Math basics','Reading practice','Science words','Simple writing'],status:'Needs real PDFs'},
+  {id:'kankor-bridge',tag:'kankor',icon:'🧭',title:'Kankor Bridge Pack',type:'Kankor bridge',language:'All languages',time:'7 days • 45 min/day',desc:'A bridge from self-study into real Kankor-style practice and mock exam readiness.',items:['Subject revision','Past question review','Timed MCQs','Weak-area list'],status:'Template ready'},
+  {id:'math-formula',tag:'math',icon:'📐',title:'Math Formula & Practice Pack',type:'Mathematics',language:'English / Pashto / Dari',time:'5 days • 30 min/day',desc:'Formula review, example problems, and short daily practice.',items:['Formulas','Examples','10 MCQs','Wrong-answer log'],status:'Needs reviewer'},
+  {id:'science-words',tag:'science',icon:'🔬',title:'Science Key Words Pack',type:'Science',language:'Pashto / Dari / English',time:'5 days • 20 min/day',desc:'Build Biology, Chemistry, and Physics vocabulary before deeper revision.',items:['Key words','Short definitions','Mini quiz','Self-explanation'],status:'Draft'},
+  {id:'language-vocab',tag:'language',icon:'🗣️',title:'Language & Vocabulary Pack',type:'Languages',language:'English / Pashto / Dari',time:'7 days • 20 min/day',desc:'Reading, vocabulary, and sentence practice for exam confidence.',items:['Vocabulary','Reading passage','5 sentences','Review'],status:'Draft'}
+ ];
+ const grid=document.querySelector('[data-pack-grid]');
+ const esc=v=>String(v||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+ function render(filter='all'){
+  if(!grid) return; const shown=filter==='all'?packs:packs.filter(p=>p.tag===filter);
+  grid.innerHTML=shown.map(p=>`<article class="pack-card"><div class="pack-card-top"><div class="icon ${p.tag==='girls'?'green':p.tag==='kankor'?'gold':'sky'}">${p.icon}</div><span class="tag ${p.status.includes('ready')?'green':p.status.includes('reviewer')?'gold':'blue'}">${esc(p.status)}</span></div><h3>${esc(p.title)}</h3><p>${esc(p.desc)}</p><div class="pack-meta"><span>${esc(p.type)}</span><span>${esc(p.time)}</span><span>${esc(p.language)}</span></div><ul>${p.items.map(i=>`<li>${esc(i)}</li>`).join('')}</ul><div class="small-actions"><button class="btn-mini" data-save-pack="${esc(p.id)}">Save</button><button class="btn-mini ghost" data-preview-pack="${esc(p.id)}">Preview</button></div></article>`).join('') || '<div class="card"><h3>No packs in this filter yet.</h3><p>Use Submit Content to suggest one.</p></div>';
+  grid.querySelectorAll('[data-save-pack]').forEach(btn=>btn.addEventListener('click',()=>{const p=packs.find(x=>x.id===btn.dataset.savePack); const saved=JSON.parse(localStorage.getItem('kepSavedPacks')||'[]'); if(p&&!saved.some(x=>x.id===p.id)) saved.push({...p,savedAt:new Date().toISOString()}); localStorage.setItem('kepSavedPacks',JSON.stringify(saved)); btn.textContent='Saved';}));
+  grid.querySelectorAll('[data-preview-pack]').forEach(btn=>btn.addEventListener('click',()=>{const p=packs.find(x=>x.id===btn.dataset.previewPack); if(p) generate({learner:p.tag==='girls'?'girls':'general',focus:p.tag,language:'en',minutes:30,title:p.title}); document.querySelector('#pack-builder')?.scrollIntoView({behavior:'smooth'});}));
+ }
+ document.querySelectorAll('[data-pack-filter]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-pack-filter]').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); render(btn.dataset.packFilter)}));
+ const tasks={math:['Revise one formula','Solve 5 practice problems','Mark every mistake','Repeat the hardest problem'],science:['Learn 5 key words','Read one short note','Answer 5 MCQs','Explain one idea aloud'],language:['Read one paragraph','Write 5 sentences','Learn 8 words','Review meanings'],kankor:['Review one subject summary','Practise 10 MCQs','Check wrong answers','Plan tomorrow’s weak area'],foundation:['Read slowly for 10 minutes','Practise basic Math','Write 5 new words','End with one confidence note'],girls:['Study in a quiet safe moment','Read one short note','Practise 5 questions','Keep progress private']};
+ const dayNames=['Day 1','Day 2','Day 3','Day 4','Day 5','Day 6','Day 7'];
+ function generate(data){
+  const focus=data.focus==='girls'?'girls':data.focus; const list=tasks[focus]||tasks.kankor; const minutes=Number(data.minutes||30); const title=data.title || (data.learner==='girls'?'Private Self-Study Pack': focus==='foundation'?'Foundation Recovery Pack': focus==='kankor'?'Kankor Bridge Pack':`${focus[0].toUpperCase()+focus.slice(1)} Weekly Pack`);
+  const plan=dayNames.map((d,i)=>({day:d,minutes:i===6?Math.max(10,Math.round(minutes*.6)):minutes,title:i===6?'Review and rest':`${title} • step ${i+1}`,tasks:[list[i%list.length],list[(i+1)%list.length],i===6?'Prepare next week':'Do a short KEP practice quiz']}));
+  const pack={...data,title,plan,createdAt:new Date().toISOString()}; localStorage.setItem('kepGeneratedStudyPack',JSON.stringify(pack)); renderGenerated(pack); return pack;
+ }
+ function renderGenerated(pack){
+  document.querySelector('[data-pack-title]').textContent=pack.title; document.querySelector('[data-pack-summary]').textContent=`${pack.language.toUpperCase()} • ${pack.minutes} minutes/day • ${pack.learner.replaceAll('_',' ')}.`;
+  document.querySelector('[data-generated-pack]').innerHTML=pack.plan.map((d,i)=>`<article class="weekly-day-card-v35"><div class="weekly-day-top-v35"><span>${esc(d.day)}</span><b>${esc(d.minutes)} min</b></div><h3>${esc(d.title)}</h3><ul>${d.tasks.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></article>`).join('');
+  const status=document.querySelector('[data-pack-status]'); if(status) status.textContent='Weekly pack generated and saved locally in this browser.';
+ }
+ document.querySelector('[data-pack-builder-form]')?.addEventListener('submit',e=>{e.preventDefault(); generate(Object.fromEntries(new FormData(e.currentTarget).entries()))});
+ document.querySelector('[data-print-pack]')?.addEventListener('click',()=>window.print());
+ try{const saved=JSON.parse(localStorage.getItem('kepGeneratedStudyPack')||'null'); if(saved) renderGenerated(saved)}catch(e){}
+ render();
+})();
+</script></body></html>

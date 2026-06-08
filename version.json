@@ -1,0 +1,13 @@
+{
+  "project": "KEP - Kankor Exam Preparation",
+  "version": "6.0",
+  "codename": "Deployment Ready Package",
+  "created_at": "2026-06-08T12:31:55Z",
+  "status": "release_candidate",
+  "notes": [
+    "Static frontend package",
+    "Supabase-ready database/login flow",
+    "Student, admin, developer, and public areas separated",
+    "Deployment and production safety guides included"
+  ]
+}

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sheets to Database Migration — KEP v4.1</title>
+  <meta name="description" content="Import approved Google Sheets questions and resources into the Supabase database.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="KEP home">
+      <img src="assets/logo.svg" alt="KEP logo">
+    </a>
+    <nav class="nav-links">
+        <a href="developer-setup.html">Setup Hub</a>
+        <a href="database-setup.html">Database</a>
+        <a href="supabase-setup.html">Supabase</a>
+        <a href="migrate-to-db.html" class="active">Migration</a>
+        <a href="system-review.html">System Review</a>
+        <a href="deployment-checklist.html">Deploy Check</a>
+      </nav>
+    <div class="nav-actions"><a class="btn btn-primary" href="student-home.html">Student View</a><a class="btn btn-secondary" href="admin-home.html">Admin Home</a></div>
+    <button class="mobile-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+  <main>
+    <section class="hero compact-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">KEP v4.1 • Migration bridge</span>
+          <h1>Move approved Google Sheets content into Supabase.</h1>
+          <p class="lead">Load your current Published questions, books, notes, and past papers from the Apps Script API, preview them, then import them into the real KEP database.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#migration-tool">Start migration</a>
+            <a class="btn btn-secondary" href="KEP_v4_1_Google_Sheets_to_Supabase_Migration_Guide.md">Read guide</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Safe migration rule</h2>
+          <p>Only content already marked <b>Published</b> in Google Sheets should be imported into the public database.</p>
+          <div class="security-note">Login as admin first. Keep Google Sheets as backup until everything is confirmed.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="migration-tool">
+      <div class="container migration-grid">
+        <aside class="card migration-control-card">
+          <span class="eyebrow">Step 1</span>
+          <h2>Connect both systems</h2>
+          <label class="field">
+            <span>Google Apps Script Web App URL</span>
+            <input type="url" data-migration-sheets-api placeholder="https://script.google.com/macros/s/.../exec">
+          </label>
+          <div class="small-actions">
+            <button class="btn btn-secondary" type="button" data-save-migration-api>Save API URL</button>
+            <button class="btn btn-primary" type="button" data-load-migration-content>Load published content</button>
+          </div>
+          <p class="small" data-migration-status>Paste the same v3.8/v3.9 Apps Script URL used for Practice and Library.</p>
+
+          <hr class="soft-divider">
+          <span class="eyebrow">Step 2</span>
+          <h2>Import to Supabase</h2>
+          <p class="small">This requires Supabase setup and an admin/reviewer account.</p>
+          <div class="small-actions">
+            <button class="btn btn-primary" type="button" data-import-questions-db>Import questions</button>
+            <button class="btn btn-secondary" type="button" data-import-resources-db>Import resources</button>
+          </div>
+          <p class="small" data-import-status>No import started yet.</p>
+
+          <hr class="soft-divider">
+          <div class="small-actions">
+            <a class="btn btn-ghost" href="database-setup.html">Database setup</a>
+            <a class="btn btn-ghost" href="admin-db.html">Admin DB</a>
+          </div>
+        </aside>
+
+        <section class="migration-preview-panel">
+          <div class="db-stat-grid migration-stats" data-migration-stats>
+            <div><b>0</b><span>Published questions</span></div>
+            <div><b>0</b><span>Published resources</span></div>
+            <div><b>0</b><span>Ready to import</span></div>
+          </div>
+
+          <div class="card">
+            <div class="section-head compact-head">
+              <div><span class="eyebrow">Preview</span><h2>Published questions</h2></div>
+            </div>
+            <div class="migration-list" data-migration-question-list><p class="small">No questions loaded yet.</p></div>
+          </div>
+
+          <div class="card">
+            <div class="section-head compact-head">
+              <div><span class="eyebrow">Preview</span><h2>Published books / papers</h2></div>
+            </div>
+            <div class="migration-list" data-migration-resource-list><p class="small">No resources loaded yet.</p></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="section muted-section">
+      <div class="container">
+        <div class="section-head"><div><span class="eyebrow">Migration workflow</span><h2>Recommended path</h2></div></div>
+        <div class="grid three">
+          <div class="card"><h3>1. Keep Sheets as collection</h3><p>Google Forms and Sheets can still be used for volunteers and content collection.</p></div>
+          <div class="card"><h3>2. Import only published</h3><p>Move reviewed and published content into Supabase so students see trusted material.</p></div>
+          <div class="card"><h3>3. Supabase becomes source of truth</h3><p>Practice, library, mock exam, and dashboards should gradually use database content first.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="supabase-config.js"></script>
+  <script src="app-v4.js"></script>
+  <script src="app-v4-migration.js"></script>
+  <script src="nav-layout.js"></script>
+</body>
+</html>

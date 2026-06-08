@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Live Content Review Dashboard — KEP</title><meta name="description" content="Review KEP submissions before publishing: source check, academic review, translation review, and publishing status."><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css"></head><body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="KEP home">
+      <img src="assets/logo.svg" alt="KEP logo">
+    </a>
+    <nav class="nav-links">
+        <a href="admin-home.html">Admin Home</a>
+        <a href="admin-review-db.html">Review Content</a>
+        <a href="admin-db.html">Admin DB</a>
+        <a href="ai-automation.html">AI Assistant</a>
+        <a href="student-home.html">Student View</a>
+      </nav>
+    <div class="nav-actions"><a class="btn btn-primary" href="admin-review-db.html">Review Queue</a><a class="btn btn-secondary" href="developer-setup.html">Setup Hub</a></div>
+    <button class="mobile-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+<main>
+<section class="page-hero review-hero"><div class="container review-hero-grid"><div><div class="breadcrumb">Home / Content Review</div><span class="eyebrow">KEP v3.0</span><h1>Live Content Review Dashboard</h1><p class="lead">This page can now connect to your Google Sheet through an Apps Script Web App, then show real KEP submissions beside the demo review items.</p><div class="hero-actions"><a class="btn btn-primary" href="submit-content.html">Open submission forms</a><a class="btn btn-secondary" href="google-forms.html">Google Forms links</a></div></div><div class="review-command-card"><div class="mark-mini">✓</div><h3>Publish only what is checked.</h3><p>KEP should never publish random content. Every item needs a source label, reviewer note, language check, and final decision.</p><div class="source-status"><span>Collected</span><span>Reviewed</span><span>Approved</span></div></div></div></section>
+
+<section class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">Review flow</span><h2>One clear path from submission to publishing.</h2></div><p>This dashboard now defines the workflow and can connect to your Google Sheet using the v3.0 Apps Script Web API. Keep it private while submissions contain contact details.</p></div><div class="review-flow-grid"><div class="timeline-step"><b>01</b><h3>New submission</h3><p>Question, paper, book, correction, or volunteer item arrives from Google Forms.</p></div><div class="timeline-step"><b>02</b><h3>Source check</h3><p>Label the item as official, textbook-based, centre paper, teacher-shared, collected, or unverified.</p></div><div class="timeline-step"><b>03</b><h3>Academic review</h3><p>Check answer, explanation, subject, chapter, difficulty, and usefulness.</p></div><div class="timeline-step"><b>04</b><h3>Language review</h3><p>Review Pashto, Dari, and English clarity before students see it.</p></div><div class="timeline-step"><b>05</b><h3>Ready to publish</h3><p>Only approved content becomes part of KEP learning pages, quizzes, or library.</p></div></div></div></section>
+
+
+<section class="section live-connector-section"><div class="container"><div class="card live-connector-card"><div><span class="eyebrow">Google Sheets connection</span><h2>Connect your live KEP submissions.</h2><p>Paste the Apps Script Web App URL here. The link is saved only in this browser, so your public website code will not expose it.</p><div class="security-note"><b>Privacy note:</b> Do not publish this review dashboard publicly while volunteer contact details are being collected. The API script returns safe summary fields only, but the dashboard is still best used as an admin tool.</div></div><div class="connector-controls"><label class="field"><span>Apps Script Web App URL</span><input type="url" data-live-api-url placeholder="https://script.google.com/macros/s/.../exec"></label><div class="small-actions"><button class="btn btn-primary" type="button" data-load-live-review>Load live submissions</button><button class="btn btn-secondary" type="button" data-save-live-api>Save URL</button><button class="btn btn-ghost" type="button" data-clear-live-api>Clear</button></div><p class="small" data-live-api-status>Not connected yet.</p></div></div></div></section>
+<section class="section section-alt"><div class="container"><div class="section-head"><div><span class="eyebrow light">Dashboard</span><h2>Review queue overview</h2></div><p>This includes demo items, local test submissions, and live summaries loaded from your Google Sheet connection.</p></div><div class="review-stats" data-review-stats></div><div class="review-toolbar"><div class="review-filters" data-review-filters><button class="btn-mini active" data-filter-review="All">All</button><button class="btn-mini" data-filter-review="Collected">Collected</button><button class="btn-mini" data-filter-review="Source Check">Source Check</button><button class="btn-mini" data-filter-review="Academic Review">Academic Review</button><button class="btn-mini" data-filter-review="Translation Review">Translation Review</button><button class="btn-mini" data-filter-review="Ready to Publish">Ready to Publish</button><button class="btn-mini" data-filter-review="Published">Published</button></div><button class="btn btn-secondary" type="button" data-reset-review>Reset demo statuses</button></div><div class="review-list" data-review-list></div></div></section>
+
+<section class="section"><div class="container grid-2"><div class="card checklist-card"><span class="eyebrow">Question checklist</span><h2>Before a question is approved</h2><ul><li>Subject and chapter are correct</li><li>Question is clear and not copied blindly</li><li>All four options are meaningful</li><li>Correct answer is verified</li><li>Explanation teaches the student</li><li>Language is natural in Pashto/Dari/English</li><li>Source is labelled honestly</li></ul></div><div class="card checklist-card"><span class="eyebrow">Paper/book checklist</span><h2>Before a PDF is published</h2><ul><li>Source or owner is known</li><li>Official vs centre vs collected label is clear</li><li>Permission/copyright status is recorded</li><li>File is readable and safe</li><li>Subject, year, language, and grade are correct</li><li>Reviewer name or note is saved</li><li>Students are not misled about authenticity</li></ul></div></div></section>
+
+<section class="section section-alt"><div class="container"><div class="card review-next-card"><div><span class="eyebrow light">Next database step</span><h2>From collection to publishing.</h2><p>After live submissions are reviewed, the next step is to move approved questions into the Practice MCQs page and approved PDFs into the Library.</p></div><div class="hero-actions"><a class="btn btn-primary" href="submit-content.html">Collect content</a><a class="btn btn-secondary" href="admin.html">Admin panel</a></div></div></div></section>
+</main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+<footer class="footer"><div class="container footer-grid"><div><h3>KEP</h3><p>Kankor Exam Preparation — a modern learning platform for Afghan students. Built dot by dot.</p></div><div><h4>Learn</h4><a href="subjects.html">Subjects</a><a href="library.html">Books</a><a href="practice.html">Practice</a></div><div><h4>Prepare</h4><a href="mock-exam.html">Mock Exam</a><a href="kankor-info.html">Kankor Info</a><a href="dashboard.html">Dashboard</a>
+      <a href="student-home.html">Student Home</a>
+      <a href="study-plan-db.html">Study Plan</a></div><div><h4>Build</h4><a href="volunteer.html">Volunteer</a><a href="submit-content.html">Submit Content</a><a href="review-dashboard.html">Review Dashboard</a><a href="admin.html">Admin Panel</a></div></div><div class="container footer-bottom"><span>© 2026 KEP. Modern MVP starter.</span><span>Prepare dot by dot.</span></div></footer><script src="nav-layout.js"></script>
+  <script src="app.js"></script></body></html>

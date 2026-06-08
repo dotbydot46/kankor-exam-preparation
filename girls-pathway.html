@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Girls Self-Study Pathway — KEP</title>
+  <meta name="description" content="A private, gentle self-study pathway for Afghan girls and private learners rebuilding from foundation to Kankor readiness.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="KEP home">
+      <img src="assets/logo.svg" alt="KEP logo">
+    </a>
+    <nav class="nav-links">
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="study-plan-db.html">Study Plan</a>
+        <a href="library-db.html">Library</a>
+        <a href="student-db.html">Profile</a>
+      </nav>
+    <div class="nav-actions"><a class="btn btn-primary" href="mock-db.html">Take Mock</a><a class="btn btn-secondary" href="study-plan-db.html">Study Plan</a></div>
+    <button class="mobile-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main class="girls-pathway-page" data-girls-pathway>
+  <section class="page-hero girls-pathway-hero">
+    <div class="container girls-pathway-hero-grid">
+      <div>
+        <div class="breadcrumb" data-gp="breadcrumb">Home / Girls Education / Self-Study Pathway</div>
+        <span class="eyebrow danger-soft" data-gp="eyebrow">KEP v3.6 girls self-study pathway</span>
+        <h1 data-gp="title">A private study path for the girls still holding their dreams.</h1>
+        <p data-gp="lead">This pathway is for girls who were stopped from school, and for any private learner who needs to rebuild quietly from foundation lessons toward Kankor readiness.</p>
+        <p class="notice privacy" data-gp="privacy">Privacy first: no Tazkira, no real name, and no sensitive identity is needed. The plan stays locally in this browser.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#build-pathway" data-gp="buildButton">Build my private pathway</a>
+          <button class="btn btn-secondary" type="button" data-safe-mode-toggle data-gp="safeModeButton">Switch to neutral mode</button>
+        </div>
+      </div>
+      <aside class="girls-pathway-card">
+        <span class="counter-label" data-gp="counterLabel">School doors closed beyond Grade 6 for</span>
+        <strong class="education-counter" data-counter-start="2022-03-23T00:00:00">0</strong>
+        <span class="counter-unit" data-gp="counterUnit">days</span>
+        <p data-gp="counterText">The counter is a reminder: every day matters, and every learner still deserves a path.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head compact-head">
+        <div><span class="eyebrow" data-gp="principlesEyebrow">Design principles</span><h2 data-gp="principlesTitle">This pathway must be gentle, safe, and useful.</h2></div>
+        <p data-gp="principlesLead">KEP should never shame a student for missed schooling. It should help her continue from the exact place she is standing.</p>
+      </div>
+      <div class="girls-principles-grid">
+        <article class="card"><div class="icon green">🔒</div><h3 data-gp="p1Title">Private by default</h3><p data-gp="p1Text">Nickname only. No unnecessary personal details. Optional neutral mode for shared devices.</p></article>
+        <article class="card"><div class="icon sky">🧱</div><h3 data-gp="p2Title">Foundation first</h3><p data-gp="p2Text">Start with basics in Math, Science, languages, and reading confidence before exam pressure.</p></article>
+        <article class="card"><div class="icon gold">🌱</div><h3 data-gp="p3Title">Small daily steps</h3><p data-gp="p3Text">Short sessions, printable plans, and repeatable practice for weak internet and busy homes.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="build-pathway">
+    <div class="container girls-pathway-builder-grid">
+      <div class="dash-panel pathway-form-panel">
+        <div class="section-head compact-head">
+          <div><span class="eyebrow" data-gp="builderEyebrow">Private pathway builder</span><h2 data-gp="builderTitle">Tell KEP what kind of support you need.</h2></div>
+          <p data-gp="builderLead">This creates a gentle weekly plan. It is not a test. It is a starting point.</p>
+        </div>
+        <form data-girls-pathway-form class="profile-form-v35">
+          <div class="form-grid compact-form-grid">
+            <label class="field"><span data-gp="nicknameLabel">Nickname</span><input data-gp-nickname placeholder="Example: Learner"></label>
+            <label class="field"><span data-gp="situationLabel">Current situation</span><select data-gp-situation><option value="missed_months" data-gp="situationMonths">Missed months of school</option><option value="missed_years" data-gp="situationYears">Missed 1+ years of school</option><option value="foundation" data-gp="situationFoundation">Need foundation learning</option><option value="kankor" data-gp="situationKankor">Ready for Kankor preparation</option></select></label>
+            <label class="field"><span data-gp="timeLabel">Study time per day</span><select data-gp-minutes><option value="20">20 minutes/day</option><option value="30">30 minutes/day</option><option value="45">45 minutes/day</option><option value="60">1 hour/day</option><option value="90">1.5 hours/day</option></select></label>
+            <label class="field"><span data-gp="focusLabel">Main focus</span><select data-gp-focus><option value="foundation">Foundation basics</option><option value="science">Science path</option><option value="math">Math confidence</option><option value="language">Pashto/Dari/English</option><option value="kankor">Kankor bridge</option></select></label>
+            <label class="field"><span data-gp="languageLabel">Preferred language</span><select data-gp-language><option value="en">English</option><option value="ps">پښتو</option><option value="fa">دری</option></select></label>
+            <label class="field"><span data-gp="deviceLabel">Learning access</span><select data-gp-access><option value="phone">Phone only</option><option value="shared">Shared device</option><option value="lowdata">Weak internet / low data</option><option value="print">Prefer printable plan</option></select></label>
+          </div>
+          <label class="privacy-toggle-v35"><input type="checkbox" data-gp-private checked> <span data-gp="privateModeLabel">Keep private mode on</span></label>
+          <div class="profile-actions-v35">
+            <button class="btn btn-primary" type="submit" data-gp="generateButton">Generate pathway</button>
+            <button class="btn btn-secondary" type="button" data-gp-print data-gp="printButton">Print / save plan</button>
+          </div>
+          <p class="small" data-gp-status></p>
+        </form>
+      </div>
+      <aside class="dash-panel girls-pathway-summary">
+        <span class="eyebrow" data-gp="summaryEyebrow">Pathway summary</span>
+        <h3 data-gp-summary-title>Private learner pathway</h3>
+        <p data-gp-summary-text>Generate a plan and KEP will show your next safe study steps.</p>
+        <div class="profile-mini-stats-v35">
+          <div><b data-gp-total-minutes>0</b><span data-gp="minutesWeek">Minutes/week</span></div>
+          <div><b data-gp-plan-type>—</b><span data-gp="pathType">Path type</span></div>
+        </div>
+        <a class="btn btn-secondary full" href="practice.html" data-gp="practiceLink">Open private practice</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head compact-head">
+        <div><span class="eyebrow" data-gp="planEyebrow">Seven-day pathway</span><h2 data-gp="planTitle">Your gentle learning week.</h2></div>
+        <p data-gp="planLead">The plan is intentionally simple: learn a little, practise a little, review mistakes, and protect hope.</p>
+      </div>
+      <div class="girls-pathway-plan-grid" data-gp-plan-grid>
+        <div class="empty-state-soft"><b data-gp="emptyTitle">No pathway yet.</b><span data-gp="emptyText">Use the builder above to create a private self-study plan.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container pathway-pack-grid">
+      <article class="dash-panel"><span class="eyebrow" data-gp="packsEyebrow">Self-study packs</span><h2 data-gp="packsTitle">What KEP should prepare for girls next.</h2><p data-gp="packsLead">These packs can become downloadable PDFs and offline lessons for private study.</p></article>
+      <article class="card"><h3 data-gp="pack1Title">Foundation Pack</h3><p data-gp="pack1Text">Basic Math, reading, writing, Science words, and confidence-building tasks.</p></article>
+      <article class="card"><h3 data-gp="pack2Title">Kankor Bridge Pack</h3><p data-gp="pack2Text">Subject revision, MCQs, weak-area repair, and mock-exam preparation.</p></article>
+      <article class="card"><h3 data-gp="pack3Title">Quiet Study Pack</h3><p data-gp="pack3Text">Low-data notes, printable weekly plans, and self-study routines for shared homes.</p></article>
+    </div>
+  </section>
+</main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+
+<footer class="footer"><div class="container footer-bottom"><span>© 2026 KEP.</span><span>Prepare dot by dot.</span></div></footer><script src="nav-layout.js"></script>
+  <script src="student-shell.js"></script>
+  <script src="app.js"></script>
+<script>
+(function(){
+  const STORE='kepGirlsPathwayV36';
+  const text={
+    en:{breadcrumb:'Home / Girls Education / Self-Study Pathway',eyebrow:'KEP v3.6 girls self-study pathway',title:'A private study path for the girls still holding their dreams.',lead:'This pathway is for girls who were stopped from school, and for any private learner who needs to rebuild quietly from foundation lessons toward Kankor readiness.',privacy:'Privacy first: no Tazkira, no real name, and no sensitive identity is needed. The plan stays locally in this browser.',buildButton:'Build my private pathway',safeModeButton:'Switch to neutral mode',counterLabel:'School doors closed beyond Grade 6 for',counterUnit:'days',counterText:'The counter is a reminder: every day matters, and every learner still deserves a path.',principlesEyebrow:'Design principles',principlesTitle:'This pathway must be gentle, safe, and useful.',principlesLead:'KEP should never shame a student for missed schooling. It should help her continue from the exact place she is standing.',p1Title:'Private by default',p1Text:'Nickname only. No unnecessary personal details. Optional neutral mode for shared devices.',p2Title:'Foundation first',p2Text:'Start with basics in Math, Science, languages, and reading confidence before exam pressure.',p3Title:'Small daily steps',p3Text:'Short sessions, printable plans, and repeatable practice for weak internet and busy homes.',builderEyebrow:'Private pathway builder',builderTitle:'Tell KEP what kind of support you need.',builderLead:'This creates a gentle weekly plan. It is not a test. It is a starting point.',nicknameLabel:'Nickname',situationLabel:'Current situation',situationMonths:'Missed months of school',situationYears:'Missed 1+ years of school',situationFoundation:'Need foundation learning',situationKankor:'Ready for Kankor preparation',timeLabel:'Study time per day',focusLabel:'Main focus',languageLabel:'Preferred language',deviceLabel:'Learning access',privateModeLabel:'Keep private mode on',generateButton:'Generate pathway',printButton:'Print / save plan',summaryEyebrow:'Pathway summary',minutesWeek:'Minutes/week',pathType:'Path type',practiceLink:'Open private practice',planEyebrow:'Seven-day pathway',planTitle:'Your gentle learning week.',planLead:'The plan is intentionally simple: learn a little, practise a little, review mistakes, and protect hope.',emptyTitle:'No pathway yet.',emptyText:'Use the builder above to create a private self-study plan.',packsEyebrow:'Self-study packs',packsTitle:'What KEP should prepare for girls next.',packsLead:'These packs can become downloadable PDFs and offline lessons for private study.',pack1Title:'Foundation Pack',pack1Text:'Basic Math, reading, writing, Science words, and confidence-building tasks.',pack2Title:'Kankor Bridge Pack',pack2Text:'Subject revision, MCQs, weak-area repair, and mock-exam preparation.',pack3Title:'Quiet Study Pack',pack3Text:'Low-data notes, printable weekly plans, and self-study routines for shared homes.',saved:'Pathway saved locally. You can print it or continue to practice.',days:['Day 1','Day 2','Day 3','Day 4','Day 5','Day 6','Day 7']},
+    ps:{breadcrumb:'کور / د نجونو زده‌کړه / د ځان زده‌کړې لاره',eyebrow:'KEP v3.6 د نجونو د ځان زده‌کړې لاره',title:'د هغو نجونو لپاره پټه او خوندي د زده‌کړې لاره چې خپل خوبونه لا ساتي.',lead:'دا لاره د هغو نجونو لپاره ده چې له ښوونځي منع شوې دي، او د هر هغه زده کوونکي لپاره چې غواړي په ارامه له بنسټيزو درسونو څخه د کانکور تر چمتووالي پورې ورسېږي.',privacy:'محرمیت لومړی: تذکره، اصلي نوم او حساس معلومات ته اړتیا نشته. دا پلان یوازې په همدې براوزر کې پاتې کېږي.',buildButton:'زما پټه لاره جوړه کړه',safeModeButton:'بې‌طرف حالت ته بدل کړه',counterLabel:'له شپږم ټولګي پورته د نجونو ښوونځي تړلي دي د',counterUnit:'ورځو لپاره',counterText:'دا شمېرنه یادونه ده: هره ورځ مهمه ده، او هر زده کوونکی لا هم د لارې حق لري.',principlesEyebrow:'د ډیزاین اصول',principlesTitle:'دا لاره باید نرمه، خوندي، او ګټوره وي.',principlesLead:'KEP باید هېڅکله زده کوونکې د پاتې زده‌کړې له امله ونه شرموي. باید له هماغه ځایه مرسته وکړي چې ولاړه ده.',p1Title:'له پیله خصوصي',p1Text:'یوازې مستعار نوم. بې ضرورته شخصي معلومات نشته. د ګډو وسیلو لپاره بې‌طرف حالت.',p2Title:'لومړی بنسټ',p2Text:'د ریاضي، ساینس، ژبو او لوستلو اعتماد له بنسټ څخه پیل کړه.',p3Title:'کوچني ورځني ګامونه',p3Text:'لنډې ناستې، د چاپ وړ پلانونه، او د کمزوري انټرنټ لپاره تکراري تمرین.',builderEyebrow:'د خصوصي لارې جوړوونکی',builderTitle:'KEP ته ووایه کوم ډول مرسته ته اړتیا لرې.',builderLead:'دا یو نرم اوونیز پلان جوړوي. دا امتحان نه دی؛ دا پیل دی.',nicknameLabel:'مستعار نوم',situationLabel:'اوسنی حالت',situationMonths:'د ښوونځي څو میاشتې پاتې شوې',situationYears:'یو کال یا زیات ښوونځی پاتې شوی',situationFoundation:'بنسټیزې زده‌کړې ته اړتیا ده',situationKankor:'د کانکور لپاره چمتو یم',timeLabel:'ورځنی د زده‌کړې وخت',focusLabel:'اصلي تمرکز',languageLabel:'غوره ژبه',deviceLabel:'د زده‌کړې لاسرسی',privateModeLabel:'خصوصي حالت فعال وساته',generateButton:'لاره جوړه کړه',printButton:'چاپ / PDF وساته',summaryEyebrow:'د لارې لنډیز',minutesWeek:'د اوونۍ دقیقې',pathType:'د لارې ډول',practiceLink:'خصوصي تمرین خلاص کړه',planEyebrow:'اووه ورځنۍ لاره',planTitle:'ستا نرمه زده‌کړنیزه اوونۍ.',planLead:'پلان قصداً ساده دی: لږ زده کړه، لږ تمرین، تېروتنې وګوره، او هیله وساته.',emptyTitle:'تر اوسه لاره نشته.',emptyText:'پورته جوړوونکی وکاروه چې خپل خصوصي پلان جوړ کړې.',packsEyebrow:'د ځان زده‌کړې بستې',packsTitle:'KEP باید وروسته د نجونو لپاره څه چمتو کړي.',packsLead:'دا بستې د PDF او افلاین درسونو په بڼه جوړېدای شي.',pack1Title:'بنسټیزه بسته',pack1Text:'بنسټیزه ریاضي، لوستل، لیکل، د ساینس کلمې، او د اعتماد کارونه.',pack2Title:'د کانکور پُل بسته',pack2Text:'د مضمون تکرار، MCQ، د کمزوري برخې ترمیم، او د آزمایښتي امتحان چمتووالی.',pack3Title:'د ارامې زده‌کړې بسته',pack3Text:'کم‌ډاټا یادښتونه، د چاپ وړ پلانونه، او د کور لپاره د ځان زده‌کړې عادتونه.',saved:'لاره په محلي ډول وساتل شوه. کولی شې چاپ یې کړې یا تمرین ته لاړه شې.',days:['۱ ورځ','۲ ورځ','۳ ورځ','۴ ورځ','۵ ورځ','۶ ورځ','۷ ورځ']},
+    fa:{breadcrumb:'خانه / آموزش دختران / مسیر خودآموزی',eyebrow:'KEP v3.6 مسیر خودآموزی دختران',title:'یک مسیر خصوصی برای دخترانی که هنوز رویاهای خود را نگه داشته‌اند.',lead:'این مسیر برای دخترانی است که از مکتب بازداشته شده‌اند، و برای هر یادگیرنده خصوصی که می‌خواهد آرام از درس‌های بنیادی تا آمادگی کانکور پیش برود.',privacy:'حریم خصوصی اول: تذکره، نام اصلی یا معلومات حساس لازم نیست. پلان فقط در همین مرورگر ذخیره می‌شود.',buildButton:'مسیر خصوصی من را بساز',safeModeButton:'تبدیل به حالت بی‌طرف',counterLabel:'دروازه‌های مکتب برای دختران بالاتر از صنف ششم بسته است برای',counterUnit:'روز',counterText:'این شمارنده یادآوری است: هر روز مهم است و هر یادگیرنده هنوز سزاوار یک مسیر است.',principlesEyebrow:'اصول طراحی',principlesTitle:'این مسیر باید نرم، امن و مفید باشد.',principlesLead:'KEP نباید هیچ شاگرد را به خاطر وقفه در آموزش شرمنده سازد. باید از همان جایی کمک کند که او ایستاده است.',p1Title:'خصوصی از آغاز',p1Text:'فقط نام مستعار. هیچ معلومات شخصی غیرضروری. حالت بی‌طرف برای دستگاه‌های مشترک.',p2Title:'اول بنیاد',p2Text:'از اساسات ریاضی، ساینس، زبان‌ها و اعتماد در خواندن شروع کن.',p3Title:'قدم‌های کوچک روزانه',p3Text:'جلسات کوتاه، پلان‌های قابل چاپ، و تمرین قابل تکرار برای اینترنت ضعیف.',builderEyebrow:'سازنده مسیر خصوصی',builderTitle:'به KEP بگو به چه نوع حمایت نیاز داری.',builderLead:'این یک پلان هفتگی آرام می‌سازد. امتحان نیست؛ نقطه آغاز است.',nicknameLabel:'نام مستعار',situationLabel:'وضعیت فعلی',situationMonths:'چند ماه مکتب را از دست داده‌ام',situationYears:'یک سال یا بیشتر مکتب را از دست داده‌ام',situationFoundation:'به آموزش بنیادی نیاز دارم',situationKankor:'برای آمادگی کانکور آماده‌ام',timeLabel:'وقت مطالعه در روز',focusLabel:'تمرکز اصلی',languageLabel:'زبان ترجیحی',deviceLabel:'دسترسی یادگیری',privateModeLabel:'حالت خصوصی روشن باشد',generateButton:'ساختن مسیر',printButton:'چاپ / ذخیره PDF',summaryEyebrow:'خلاصه مسیر',minutesWeek:'دقیقه در هفته',pathType:'نوع مسیر',practiceLink:'تمرین خصوصی را باز کن',planEyebrow:'مسیر هفت روزه',planTitle:'هفته یادگیری آرام تو.',planLead:'پلان عمداً ساده است: کمی یاد بگیر، کمی تمرین کن، اشتباهات را مرور کن و امید را نگه دار.',emptyTitle:'هنوز مسیری نیست.',emptyText:'از سازنده بالا استفاده کن تا پلان خصوصی خود را بسازی.',packsEyebrow:'بسته‌های خودآموزی',packsTitle:'KEP در مرحله بعد برای دختران چه آماده کند.',packsLead:'این بسته‌ها می‌توانند به PDF و درس‌های آفلاین تبدیل شوند.',pack1Title:'بسته بنیادی',pack1Text:'ریاضی ابتدایی، خواندن، نوشتن، واژه‌های ساینس و تمرین‌های اعتمادسازی.',pack2Title:'بسته پل کانکور',pack2Text:'مرور مضمون، MCQ، ترمیم نقاط ضعیف و آمادگی امتحان آزمایشی.',pack3Title:'بسته مطالعه آرام',pack3Text:'یادداشت‌های کم‌مصرف، پلان‌های قابل چاپ و عادت‌های خودآموزی برای خانه‌های مشترک.',saved:'مسیر به صورت محلی ذخیره شد. می‌توانی چاپ کنی یا به تمرین ادامه دهی.',days:['روز ۱','روز ۲','روز ۳','روز ۴','روز ۵','روز ۶','روز ۷']}
+  };
+  const tasks={
+    foundation:['Read one short note slowly','Practise 5 basic Math questions','Write 5 words you learned','Review mistakes without pressure'],
+    science:['Learn 3 science words','Read one Biology/Chemistry note','Practise 5 MCQs','Explain one idea in your own words'],
+    math:['Revise one formula','Solve 5 simple problems','Check each mistake','Repeat the weakest problem type'],
+    language:['Read one paragraph','Write 5 sentences','Practise vocabulary','Read aloud for confidence'],
+    kankor:['Review one subject summary','Practise 10 MCQs','Mark wrong answers','Plan tomorrow’s weak area']
+  };
+  const focusLabels={foundation:'Foundation',science:'Science',math:'Math',language:'Language',kankor:'Kankor'};
+  const $=s=>document.querySelector(s);
+  function lang(){return localStorage.getItem('kepLanguage') || document.documentElement.lang || 'en'}
+  function tr(k){const l=lang(); return (text[l]&&text[l][k]) || text.en[k] || k}
+  function applyPathwayLanguage(){document.querySelectorAll('[data-gp]').forEach(el=>{const k=el.getAttribute('data-gp'); if(tr(k)) el.textContent=tr(k)}); const saved=load(); if(saved) render(saved)}
+  function read(){return {nickname: $('[data-gp-nickname]')?.value.trim() || '', situation:$('[data-gp-situation]')?.value||'foundation', minutes:Number($('[data-gp-minutes]')?.value||30), focus:$('[data-gp-focus]')?.value||'foundation', language:$('[data-gp-language]')?.value||lang(), access:$('[data-gp-access]')?.value||'phone', privateMode:$('[data-gp-private]')?.checked !== false, createdAt:new Date().toISOString()}}
+  function makePlan(p){const list=tasks[p.focus]||tasks.foundation; return [0,1,2,3,4,5,6].map((_,i)=>({day:i, title:i===0?'Start gently':i===6?'Review and rest':`${focusLabels[p.focus]||'Study'} step ${i+1}`, minutes:i===6?Math.max(10,Math.round(p.minutes*.5)):p.minutes, tasks:[list[i%list.length], list[(i+1)%list.length], i===6?'Prepare next week':'End with one confidence sentence']}))}
+  function save(p){p.plan=makePlan(p); localStorage.setItem(STORE,JSON.stringify(p)); return p}
+  function load(){try{return JSON.parse(localStorage.getItem(STORE)||'null')}catch(e){return null}}
+  function esc(v){return String(v||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+  function render(p){const name=p.privateMode?'Private learner':(p.nickname||'Private learner'); $('[data-gp-summary-title]').textContent=`${name} • ${focusLabels[p.focus]||'Pathway'}`; $('[data-gp-summary-text]').textContent=`${p.minutes} minutes/day • ${p.situation.replaceAll('_',' ')} • ${p.access}`; $('[data-gp-total-minutes]').textContent=String((p.plan||[]).reduce((s,d)=>s+d.minutes,0)); $('[data-gp-plan-type]').textContent=focusLabels[p.focus]||'Path'; const days=tr('days')||text.en.days; const grid=$('[data-gp-plan-grid]'); grid.innerHTML=(p.plan||[]).map((d,i)=>`<article class="weekly-day-card-v35 girls-day-card"><div class="weekly-day-top-v35"><span>${esc(days[i]||('Day '+(i+1)))}</span><b>${esc(d.minutes)} min</b></div><h3>${esc(d.title)}</h3><ul>${d.tasks.map(task=>`<li>${esc(task)}</li>`).join('')}</ul></article>`).join('')}
+  $('[data-girls-pathway-form]')?.addEventListener('submit',e=>{e.preventDefault(); const p=save(read()); if(p.language!==lang() && window.applyKepLanguage) window.applyKepLanguage(p.language); render(p); const s=$('[data-gp-status]'); if(s) s.textContent=tr('saved')});
+  $('[data-gp-print]')?.addEventListener('click',()=>window.print());
+  $('[data-safe-mode-toggle]')?.addEventListener('click',()=>document.body.classList.toggle('safe-study-mode'));
+  document.querySelectorAll('[data-lang-button]').forEach(btn=>btn.addEventListener('click',()=>setTimeout(applyPathwayLanguage,30)));
+  const saved=load(); if(saved){ $('[data-gp-nickname]').value=saved.nickname||''; $('[data-gp-situation]').value=saved.situation||'foundation'; $('[data-gp-minutes]').value=saved.minutes||30; $('[data-gp-focus]').value=saved.focus||'foundation'; $('[data-gp-language]').value=saved.language||lang(); $('[data-gp-access]').value=saved.access||'phone'; $('[data-gp-private]').checked=saved.privateMode!==false; render(saved); }
+  setTimeout(applyPathwayLanguage,50);
+})();
+</script></body></html>

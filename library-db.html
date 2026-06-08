@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library from Database — KEP</title>
+  <meta name="description" content="KEP library powered by Supabase published books, notes, PDFs, and past papers.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="KEP home">
+      <img src="assets/logo.svg" alt="KEP logo">
+    </a>
+    <nav class="nav-links">
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="study-plan-db.html">Study Plan</a>
+        <a href="library-db.html" class="active">Library</a>
+        <a href="student-db.html">Profile</a>
+      </nav>
+    <div class="nav-actions"><a class="btn btn-primary" href="mock-db.html">Take Mock</a><a class="btn btn-secondary" href="study-plan-db.html">Study Plan</a></div>
+    <button class="mobile-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+  <main>
+    <section class="hero compact-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">KEP v4.2 • Supabase Library</span>
+          <h1>Books, notes, PDFs, and past papers from the real database.</h1>
+          <p class="lead">This page reads only published resources from Supabase, so students see approved content from the database, not only Google Sheets.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button" data-db-library-load>Load library</button>
+            <a class="btn btn-secondary" href="migrate-to-db.html">Migrate content</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Library status</h2>
+          <p data-db-library-status>Ready to load published resources.</p>
+          <div class="security-note">Only resources with status <b>published</b> appear here.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="library-live-toolbar">
+          <div class="filters">
+            <button class="filter active" type="button" data-db-library-type="All">All</button>
+            <button class="filter" type="button" data-db-library-type="Book / Notes">Books / Notes</button>
+            <button class="filter" type="button" data-db-library-type="Past Paper">Past Papers</button>
+          </div>
+          <div class="library-filter-selects">
+            <select data-db-library-subject><option value="All">All subjects</option></select>
+            <select data-db-library-language><option value="All">All languages</option></select>
+          </div>
+        </div>
+
+        <div class="db-stat-grid" data-db-library-stats>
+          <div><b>0</b><span>Resources</span></div>
+          <div><b>0</b><span>Books / Notes</span></div>
+          <div><b>0</b><span>Past Papers</span></div>
+        </div>
+
+        <div class="library-resource-grid" data-db-library-grid style="margin-top:22px">
+          <div class="empty-state-soft"><b>No resources loaded yet.</b><span>Click “Load library” after migrating or adding published resources to Supabase.</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="KEP logo"><b>KEP</b></a>
+        <p>Kankor Exam Preparation support platform — built for practice, progress, and safer self-study.</p>
+        <small>Educational support only. KEP is not an official exam authority and does not guarantee admission or results.</small>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <a href="student-home.html">Student Home</a>
+        <a href="practice-db.html">Practice</a>
+        <a href="mock-db.html">Mock Exam</a>
+        <a href="progress-analytics.html">Progress</a>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <a href="about.html">About</a>
+        <a href="girls-education.html">Girls Education</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Trust</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="public-launch-checklist.html">Launch Checklist</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="supabase-config.js"></script>
+  <script src="app-v4.js"></script>
+  <script src="nav-layout.js"></script>
+  <script src="student-shell.js"></script>
+</body>
+</html>

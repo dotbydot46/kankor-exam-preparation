@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Launch Mode — KEP v6.0</title>
+  <meta name="description" content="Controlled launch plan for KEP.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="KEP home">
+        <img src="assets/logo.svg" alt="KEP logo">
+      </a>
+      <nav class="nav-links">
+        <a href="developer-setup.html">Setup Hub</a>
+        <a href="deploy-guide.html">Deploy</a>
+        <a href="launch-mode.html" class="active">Launch Mode</a>
+        <a href="production-checklist.html">Checklist</a>
+        <a href="release-notes.html">Release</a>
+        <a href="student-home.html">Student</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="student-home.html">Start Learning</a>
+        <a class="btn btn-secondary" href="developer-setup.html">Setup</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero compact-hero public-launch-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Launch Mode</span>
+          <h1>Launch KEP carefully, with real feedback.</h1>
+          <p class="lead">KEP is strong now, but the safest launch is small, focused, and controlled. Start with trusted testers, learn from them, then improve.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="student-home.html">Test Student Flow</a>
+            <a class="btn btn-secondary" href="admin-home.html">Test Admin Flow</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Dot by dot launch</h2>
+          <p>Do not rush. Test one journey, fix one issue, improve one part, then move forward.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="launch-timeline">
+          <article><span>1</span><h3>Upload v6.0</h3><p>Deploy to GitHub Pages or Netlify and open the live link.</p></article>
+          <article><span>2</span><h3>Connect Supabase</h3><p>Save Supabase URL/key on the live domain using Database Setup.</p></article>
+          <article><span>3</span><h3>Test student flow</h3><p>Practice, mock exam, study plan, library, and progress.</p></article>
+          <article><span>4</span><h3>Test admin flow</h3><p>Admin review, content quality, saved AI suggestions, setup pages.</p></article>
+          <article><span>5</span><h3>Invite testers</h3><p>Ask 2–3 trusted people to test on mobile and report issues.</p></article>
+          <article><span>6</span><h3>Improve content</h3><p>Use Content Quality Dashboard and feedback to improve the content bank.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section">
+      <div class="container">
+        <div class="card">
+          <span class="eyebrow">Feedback questions</span>
+          <h2>Ask testers these questions</h2>
+          <ul class="check-list">
+            <li>Was the website easy to understand?</li>
+            <li>Could you start practice without confusion?</li>
+            <li>Did mock exam work on your phone?</li>
+            <li>Were explanations useful?</li>
+            <li>What felt missing or confusing?</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="nav-layout.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

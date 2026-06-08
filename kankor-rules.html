@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kankor Rules & Exam Templates — KEP</title>
+  <meta name="description" content="Research and manage verified Kankor exam rules and mock exam templates for KEP.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="KEP home">
+      <img src="assets/logo.svg" alt="KEP logo">
+    </a>
+    <nav class="nav-links">
+        <a href="developer-setup.html">Setup Hub</a>
+        <a href="database-setup.html">Database</a>
+        <a href="supabase-setup.html">Supabase</a>
+        <a href="migrate-to-db.html">Migration</a>
+        <a href="system-review.html">System Review</a>
+        <a href="deployment-checklist.html">Deploy Check</a>
+      </nav>
+    <div class="nav-actions"><a class="btn btn-primary" href="student-home.html">Student View</a><a class="btn btn-secondary" href="admin-home.html">Admin Home</a></div>
+    <button class="mobile-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+  <main>
+    <section class="hero compact-hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">KEP v3.10 • Trust before simulation</span>
+          <h1>Kankor Rules & Exam Template Manager</h1>
+          <p class="lead">Collect verified exam rules, record sources, and create flexible mock exam templates without pretending unverified information is official.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#rules-research">Add rules research</a>
+            <a class="btn btn-secondary" href="#template-manager">Create template</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>KEP honesty rule</h2>
+          <p>Until total questions, subject distribution, time, and marking are verified from trusted sources, KEP must label the full mock as “Kankor-style,” not “official format.”</p>
+          <div class="security-note">Every real rule needs a source, year, verifier, and date checked.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="rules-research">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Research sheet</span>
+            <h2>Verified Kankor rules collection</h2>
+            <p>Use this section to collect official or teacher-verified information before changing the full mock exam format.</p>
+          </div>
+          <button class="btn btn-secondary" type="button" data-export-rules>Export rules JSON</button>
+        </div>
+
+        <div class="rules-manager-grid">
+          <form class="card rules-form" data-rules-form>
+            <h3>Add / update rule entry</h3>
+            <label class="field"><span>Rule year / Hijri year</span><input name="year" placeholder="Example: 1405 / 2026"></label>
+            <label class="field"><span>Source title</span><input name="sourceTitle" placeholder="NEXA announcement, teacher guide, past paper..."></label>
+            <label class="field"><span>Source link or reference</span><input name="sourceLink" placeholder="https://... or document name"></label>
+            <div class="form-grid two">
+              <label class="field"><span>Total questions</span><input name="totalQuestions" placeholder="To be verified"></label>
+              <label class="field"><span>Exam time</span><input name="examTime" placeholder="To be verified"></label>
+            </div>
+            <label class="field"><span>Subjects included</span><textarea name="subjects" placeholder="Math, Physics, Chemistry..."></textarea></label>
+            <label class="field"><span>Questions per subject</span><textarea name="distribution" placeholder="Math: __, Physics: __, Chemistry: __"></textarea></label>
+            <label class="field"><span>Marking rules</span><textarea name="marking" placeholder="Correct marks, negative marking, blank answers..."></textarea></label>
+            <div class="form-grid two">
+              <label class="field"><span>Verified by</span><input name="verifiedBy" placeholder="Reviewer / teacher name"></label>
+              <label class="field"><span>Date checked</span><input name="dateChecked" type="date"></label>
+            </div>
+            <label class="field"><span>Status</span>
+              <select name="status">
+                <option>Needs source</option>
+                <option>Source found</option>
+                <option>Teacher checked</option>
+                <option>Verified</option>
+                <option>Rejected / unclear</option>
+              </select>
+            </label>
+            <button class="btn btn-primary wide" type="submit">Save rule entry</button>
+          </form>
+
+          <div class="rules-list-wrap">
+            <div class="card">
+              <h3>Rule entries</h3>
+              <p>Use only entries marked <b>Verified</b> when updating the official-style mock template.</p>
+            </div>
+            <div class="rules-list" data-rules-list></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section" id="template-manager">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Templates</span>
+            <h2>Exam template manager</h2>
+            <p>Create exam templates for Quick Mock, Subject Mock, Science-heavy, Math-heavy, or a future verified full Kankor template.</p>
+          </div>
+          <div class="small-actions">
+            <button class="btn btn-secondary" type="button" data-export-templates>Export templates JSON</button>
+            <button class="btn btn-ghost" type="button" data-reset-templates>Reset templates</button>
+          </div>
+        </div>
+
+        <div class="template-manager-grid">
+          <form class="card template-form" data-template-form>
+            <h3>Create template</h3>
+            <label class="field"><span>Template name</span><input name="name" placeholder="Example: Science-heavy mock"></label>
+            <div class="form-grid two">
+              <label class="field"><span>Time limit in minutes</span><input name="timeMinutes" type="number" min="0" value="20"></label>
+              <label class="field"><span>Verification status</span>
+                <select name="verificationStatus">
+                  <option>Practice template</option>
+                  <option>Needs verification</option>
+                  <option>Teacher checked</option>
+                  <option>Verified official-style</option>
+                </select>
+              </label>
+            </div>
+            <label class="field"><span>Description / use case</span><textarea name="description" placeholder="What is this template for?"></textarea></label>
+            <div class="template-subject-builder">
+              <div class="builder-head">
+                <h4>Subject distribution</h4>
+                <button class="btn btn-secondary" type="button" data-add-template-subject>Add subject</button>
+              </div>
+              <div data-template-subjects></div>
+            </div>
+            <button class="btn btn-primary wide" type="submit">Save template</button>
+            <p class="small">Saved templates appear in the Mock Exam page dropdown in this browser.</p>
+          </form>
+
+          <div class="template-list" data-template-list></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card result-hero-card">
+          <span class="eyebrow">Next use</span>
+          <h2>Use saved templates in Mock Exam</h2>
+          <p>After creating a template, open the Mock Exam page. The saved template will appear as an optional template selection.</p>
+          <div class="hero-actions">
+            <a class="btn btn-light" href="mock.html">Open Mock Exam</a>
+            <a class="btn btn-outline-light" href="KEP_v3_10_Kankor_Rules_Template_Manager_Guide.md">Read guide</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/kep-logo.svg" alt="KEP logo" class="footer-logo">
+        <p>KEP helps Afghan students prepare for Kankor through learning resources, practice, mock exams, and guidance.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <a href="subjects.html">Subjects</a>
+        <a href="library.html">Library</a>
+        <a href="practice.html">Practice</a>
+        <a href="mock.html">Mock Exam</a>
+      </div>
+      <div>
+        <h4>Trust</h4>
+        <a href="kankor-rules.html">Exam Rules</a>
+        <a href="review-dashboard.html">Review Dashboard</a>
+        <a href="submit-content.html">Submit Content</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="nav-layout.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

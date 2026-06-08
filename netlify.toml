@@ -1,0 +1,18 @@
+# KEP v6.0 Netlify deployment config
+# KEP is a static frontend. Supabase URL/key are saved in browser by Database Setup page.
+# Do not add secret keys here.
+
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
