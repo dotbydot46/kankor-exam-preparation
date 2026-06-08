@@ -359,20 +359,24 @@
     let dbRows = [];
     let dbError = null;
 
-    if(window.kepSupabase){
+    const hasDbClient = !!(window.kepSupabase || (window.KEP_DB && typeof window.KEP_DB.client === 'function'));
+
+    if(hasDbClient){
       const result = await loadDbAttempts();
       dbRows = result.data || [];
       dbError = result.error;
+    } else {
+      dbError = new Error('Supabase client is not ready. Open Database Setup first.');
     }
 
     state.attempts = mergeAttempts(dbRows, localRows);
 
     if(dbError && localRows.length){
-      status(`Loaded local progress only. Database attempts could not load: ${dbError.message || dbError}`, 'warn');
+      status(`Loaded ${localRows.length} local attempt(s). Database attempts could not load: ${dbError.message || dbError}`, 'warn');
     } else if(dbError) {
-      status(`Database attempts could not load. Try login again or complete a practice session.`, 'warn');
+      status(`Database attempts could not load: ${dbError.message || dbError}`, 'warn');
     } else {
-      status(`Loaded ${state.attempts.length} attempt(s).`, 'ok');
+      status(`Loaded ${state.attempts.length} attempt(s): ${dbRows.length} database + ${localRows.length} local.`, 'ok');
     }
 
     render();
@@ -394,6 +398,13 @@
     a.click();
     URL.revokeObjectURL(url);
   }
+
+  
+  window.kepProgressDebug = async function(){
+    const result = await loadDbAttempts();
+    console.log('KEP Progress Debug:', result);
+    return result;
+  };
 
   document.addEventListener('click', (e) => {
     const action = e.target.closest('[data-progress-action]')?.dataset.progressAction;

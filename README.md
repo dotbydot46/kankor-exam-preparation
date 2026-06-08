@@ -1,4 +1,4 @@
-# KEP v6.0.5 — Kankor Exam Preparation
+# KEP v6.0.6 — Kankor Exam Preparation
 
 This is the modern starter website for KEP, rebuilt from the original Kankor Exam Preparation FYP idea into a web-first education platform.
 
@@ -11,6 +11,14 @@ This is the modern starter website for KEP, rebuilt from the original Kankor Exa
 
 
 
+
+## v6.0.6 updates — Progress Loader Fix
+
+- Fixed Progress Analytics still showing 0 attempts after v6.0.5.
+- Progress now checks the real KEP DB client: `window.KEP_DB.client()`.
+- Status message now shows database + local attempt counts.
+- Added `window.kepProgressDebug()` for console inspection.
+- Added `KEP_v6_0_6_Progress_Loader_Fix_Report.md`.
 
 ## v6.0.5 updates — Progress Analytics Database Fix
 
