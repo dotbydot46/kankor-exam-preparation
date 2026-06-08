@@ -62,7 +62,7 @@
   }
 
   function getType(a){
-    return a.exam_type || a.type || a.mode || a.source || 'practice';
+    return a.attempt_type || a.exam_type || a.type || a.mode || a.source || 'practice';
   }
 
   function getDate(a){
@@ -89,8 +89,23 @@
     })) : [];
   }
 
+  
+  function normalizeDbAttempts(rows){
+    return (rows || []).map((a, index) => ({
+      ...a,
+      id: a.id || `db-${index}`,
+      source_kind: 'database',
+      exam_type: a.attempt_type || a.exam_type || a.type || 'database_practice',
+      score_percent: a.score_percent ?? a.percentage ?? (a.total ? Math.round((Number(a.score || 0) / Number(a.total || 1)) * 100) : 0),
+      correct_count: a.correct_count ?? a.correct ?? a.score ?? 0,
+      total_questions: a.total_questions ?? a.total ?? 0,
+      subject_breakdown: a.subject_breakdown || {},
+      created_at: a.created_at || a.finished_at || new Date().toISOString()
+    }));
+  }
+
   function mergeAttempts(dbRows, localRows){
-    const db = (dbRows || []).map(a => ({...a, source_kind:'database'}));
+    const db = normalizeDbAttempts(dbRows || []);
     return [...db, ...localRows].sort((a,b) => new Date(getDate(b)) - new Date(getDate(a)));
   }
 
@@ -307,11 +322,28 @@
   }
 
   async function loadDbAttempts(){
-    if(!window.kepSupabase) return { data: [], error: new Error('Supabase client not ready') };
+    const client = window.kepSupabase || (window.KEP_DB && window.KEP_DB.client ? window.KEP_DB.client() : null);
+    if(!client) return { data: [], error: new Error('Supabase client not ready. Open Database Setup first.') };
 
-    const { data, error } = await window.kepSupabase
+    let user = null;
+    try{
+      if(typeof getCurrentUserAndProfile === 'function'){
+        const session = await getCurrentUserAndProfile();
+        user = session.user;
+      }else{
+        const { data } = await client.auth.getUser();
+        user = data?.user || null;
+      }
+    }catch(err){
+      return { data: [], error: err };
+    }
+
+    if(!user) return { data: [], error: new Error('Please login first.') };
+
+    const { data, error } = await client
       .from('exam_attempts')
       .select('*')
+      .eq('student_id', user.id)
       .order('created_at', { ascending: false })
       .limit(200);
 
@@ -319,7 +351,7 @@
   }
 
   async function loadProgress(){
-    status('Loading your progress...', 'info');
+    status('Loading your database progress...', 'info');
 
     const localRows = normalizeLocalAttempts();
     state.localAttempts = localRows;
@@ -378,5 +410,6 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     render();
+    setTimeout(loadProgress, 350);
   });
 })();

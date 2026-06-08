@@ -1,4 +1,4 @@
-# KEP v6.0.4 — Kankor Exam Preparation
+# KEP v6.0.5 — Kankor Exam Preparation
 
 This is the modern starter website for KEP, rebuilt from the original Kankor Exam Preparation FYP idea into a web-first education platform.
 
@@ -11,6 +11,15 @@ This is the modern starter website for KEP, rebuilt from the original Kankor Exa
 
 
 
+
+## v6.0.5 updates — Progress Analytics Database Fix
+
+- Fixed Progress Analytics showing 0 while Student Profile showed saved attempts.
+- Added missing Supabase CDN and `supabase-config.js` to `progress-analytics.html`.
+- Updated Progress Analytics to load `exam_attempts` for the logged-in student.
+- Added mapping for `attempt_type`, `score`, `total`, and `percentage`.
+- Progress now auto-loads shortly after opening.
+- Added `KEP_v6_0_5_Progress_Analytics_Fix_Report.md`.
 
 ## v6.0.4 updates — Role Navigation and Internal Polish
 
