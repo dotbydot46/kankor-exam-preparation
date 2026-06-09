@@ -1,4 +1,4 @@
-# KEP v6.3 — Kankor Exam Preparation
+# KEP v6.3.1 — Kankor Exam Preparation
 
 This is the modern starter website for KEP, rebuilt from the original Kankor Exam Preparation FYP idea into a web-first education platform.
 
@@ -11,6 +11,16 @@ This is the modern starter website for KEP, rebuilt from the original Kankor Exa
 
 
 
+
+## v6.3.1 updates — Full Website Review & Navigation Polish
+
+- Added final stable navigation polish.
+- Added internal page helper strip.
+- Added clean footer quick links.
+- Added `site-review-map.html`.
+- Replaced old/confusing practice/mock links.
+- Added `KEP_v6_3_1_Full_Website_Review_Report.md`.
+- No SQL required.
 
 ## v6.3 updates — Simplify & Launch Mode
 

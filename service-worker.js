@@ -1,4 +1,4 @@
-const CACHE_NAME='kep-v6.3';
+const CACHE_NAME='kep-v6.3.1';
 const ASSETS=[
   "./",
   "FILE_MANIFEST_v6.0.json",
@@ -70,6 +70,8 @@ const ASSETS=[
   "KEP_v6_1_Content_Launch_Pack_Guide.md",
   "KEP_v6_2_Check_Report.md",
   "KEP_v6_2_Tester_Feedback_Guide.md",
+  "KEP_v6_3_1_Full_Website_Review_Report.md",
+  "KEP_v6_3_Check_Report.md",
   "KEP_v6_3_Simplify_Launch_Mode_Guide.md",
   "README.md",
   "about.html",
@@ -164,6 +166,7 @@ const ASSETS=[
   "scripts/KEP_v6_1_Content_Launch_Pack.sql",
   "scripts/KEP_v6_2_Tester_Feedback_Table.sql",
   "service-worker.js",
+  "site-review-map.html",
   "sitemap.xml",
   "start.html",
   "student-db.html",
